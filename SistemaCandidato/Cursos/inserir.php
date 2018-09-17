@@ -3,7 +3,6 @@
 session_start();
 
 include '../sql/conectar.php';
-$id = $_SESSION ['id'];
 
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
@@ -17,14 +16,10 @@ if(!empty($nome) && !empty($descricao) && !empty($datainicial) && !empty($datafi
 
 $query = "insert into cursos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$quantidadesemestres', '$quantidadesemestresfinalizados', '$id')";
 
+echo $sql;
+
+}
 
 mysqli_query($conexao, $query);
 
 header('Location: form_inserir.php');
-
-} else {
- 
-    echo 'Preencha todos os campos por favor';
-    echo "<a href='http://localhost/SistemaCandidato/Cursos/form_inserir.php'>Cursos -</a>";
-    
-}

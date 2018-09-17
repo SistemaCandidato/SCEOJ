@@ -1,23 +1,18 @@
 <?php
-
 session_start();
 
-include '../sql/conectar.php';
+
 
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $datainicial = $_POST['datainicial'];
 $datafinal = $_POST['datafinal'];  
+include '../sql/conectar.php';
 $id = $_SESSION['id'];
 
-if(!empty($nome) && !empty($descricao) && !empty($datainicial) && !empty($datafinal)){
 
-$query = "insert into conhecimentos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$id')";
+$query = "insert into conhecimentos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$id',default)";
 
-echo $sql;
+mysqli_query($conexao, $query);
 
-//mysqli_query($conexao, $query);
-
-//header('Location: form_inserir.php');
-
-} 
+header('Location: form_inserir.php');

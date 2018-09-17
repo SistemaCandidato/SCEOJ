@@ -30,5 +30,5 @@
                  <div class="form-group">
     <input type="submit" class="btn btn-success col-sm-6 offset-4" value="Logar!">
   </div>
-            </form>
+</form>
              

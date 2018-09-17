@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
 ENGINE = InnoDB;
 INSERT INTO candidatos values(default,'vinicius.ng','v','Vinicius NazarÃ­o',18,'Paulo Orlandi','Fabio Silva','170','Casa','TubarÃ£o','SC','viniciusnazario25@gmail.com','36225496','15818181','3113321213',default);
 
+select * from empresas;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -72,11 +73,12 @@ CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   UNIQUE INDEX `rg` (`rg` ASC),
   UNIQUE INDEX `cpf` (`cpf` ASC),
   UNIQUE INDEX `email` (`email` ASC))
-ENGINE = InnoDB;
-SELECT * FROM vagas;
+ENGINE = InnoDB;.
+
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas`
 -- -----------------------------------------------------
+select * from vagas;
 CREATE TABLE IF NOT EXISTS `Teste`.`vagas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `datainicio` DATE NOT NULL,
@@ -110,6 +112,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`cursos`
 -- -----------------------------------------------------
+select * from cursos;
 CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
@@ -131,12 +134,11 @@ CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-select * from entrevistas;
-
 
 -- -----------------------------------------------------
 -- Table `mydb`.`conhecimentos`
 -- -----------------------------------------------------
+select * from conhecimentos;
 CREATE TABLE IF NOT EXISTS `Teste`.`conhecimentos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
@@ -161,6 +163,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`trabalhos`
 -- -----------------------------------------------------
+select * from trabalhos;
 CREATE TABLE IF NOT EXISTS `Teste`.`trabalhos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
@@ -189,6 +192,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas_has_candidatos`
 -- -----------------------------------------------------
+select * from vagas_has_candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`vagas_has_candidatos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `vagas_id` INT NOT NULL,
@@ -212,6 +216,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`entrevistas`
 -- -----------------------------------------------------
+select * from entrevistas;
 CREATE TABLE IF NOT EXISTS `Teste`.`entrevistas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
@@ -233,6 +238,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`areas`
 -- -----------------------------------------------------
+select * from areas;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -254,7 +260,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`areas_has_vagas`
 -- -----------------------------------------------------
 
-
+select * from areas_has_vagas;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_vagas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `areas_id` INT NOT NULL,
@@ -278,6 +284,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`areas_has_candidatos`
 -- -----------------------------------------------------
+select * from areas_has_candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
   `id` INT NOT NULL,
   `areas_id` INT NOT NULL,
@@ -298,48 +305,38 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
 ENGINE = InnoDB;
 
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
-
-
-update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
-update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
-
-insert into usuarios_empresas values (default, 'Octavio', 'octavionaspolini@gmail.com', 'tata', '3');
-insert into conhecimentos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '18/12/2018', '2');
-insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', '3', '2', '2');
-insert into trabalhos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', 'Computacao', 'Java', 'Implementar o codigo', '2');
-
-
-select * from usuarios_empresas where empresa_id = 2;
-
-select * from candidato; 
-select * from empresa; 
-select * from areas;
-select * from vagas;
-select * from usuarios_empresas; 
-select * from conhecimentos;
-select * from cursos;
-select * from trabalhos; 
-select * from usuario_has_vagas;
-select vagas.nome from vagas;
-select * from candidato where id ='1';
-insert into administrador values (default,'administrador','$123','$Vinicius');
-
 delete from candidato; 
 delete from empresa; 
 delete from areas;
 delete from vagas;
-delete from usuarios_empresas; 
 delete from conhecimentos;
 delete from cursos;
 delete from trabalhos; 
 delete from usuario_has_vagas;
 
 
+update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
+update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
+
+insert into conhecimentos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '18/12/2018', '2');
+insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', '3', '2', '2');
+insert into trabalhos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', 'Computacao', 'Java', 'Implementar o codigo', '2');
+
+
+select vagas.nome from vagas;
+select * from candidato where id ='1';
+insert into administrador values (default,'administrador','$123','$Vinicius');
+
+
+
+
 insert into candidatos values (default,'octavio.n09','tata','Octavio',19,'Rua Julio Francisco Regis','Vila Moema','43','401','Tubarao','SC','octavionaspolinineto@gmail.com','996178590','454663','065717565-01',default)
 
 insert into administrador values (default,'admin','admin1','123');
+
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

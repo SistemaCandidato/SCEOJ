@@ -17,14 +17,10 @@ if(!empty($nome) && !empty($descricao) && !empty($datainicial) && !empty($datafi
 
 $query = "insert into trabalhos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$setor', '$funcao', '$tarefas', '$id')";
 
+echo $sql;
+
+}
 
 mysqli_query($conexao, $query);
 
 header('Location: form_inserir.php');
-
-} else {
- 
-    echo 'Preencha todos os campos por favor';
-    echo "<a href='http://localhost/SistemaCandidato/Trabalhos/form_inserir.php'>Trabalhos -</a>";
-    
-}
