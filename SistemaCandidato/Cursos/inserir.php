@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 include '../sql/conectar.php';
 $id = $_SESSION ['id'];

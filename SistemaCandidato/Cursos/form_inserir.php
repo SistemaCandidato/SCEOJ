@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <?php
-       include '../navBar/navBarOFF.php';
+       include '../cabecalho.php';
      ?>  
    <head>
        <meta charset="UTF-8">
