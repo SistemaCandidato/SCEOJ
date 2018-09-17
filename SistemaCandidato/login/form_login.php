@@ -81,6 +81,7 @@ if (Count($_POST) > 0) {
                 
                  
              
+   
     echo '<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <div class="alert alert-danger  col-sm-3 offset-4" align="center" role="alert">
   Usuário ou senha invalidos, ou você não foi aceito pelo ADM!

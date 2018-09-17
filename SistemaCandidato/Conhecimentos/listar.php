@@ -11,7 +11,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 <table border="1">
     <tr>
-       <td>Nome</td><td>Descrição</td><td>Data Inicial</td><td>Data Final</td><td>Excluir</td><td>Alterar</td>
+        <td>Nome</td><td>Descrição</td><td>Data Inicial</td><td>Data Final</td><td>Local</td><td>Status</td><td>Excluir</td><td>Alterar</td>
     </tr>
     <?php
     while ($linha = mysqli_fetch_array($resultado)) {
@@ -21,6 +21,9 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $linha['descricao'] ?></td>
             <td><?= $linha['datainicial']?></td> 
             <td><?= $linha['datafinal'] ?></td>
+            <td><?= $linha['local']?></td> 
+            <td><?= $linha['status'] ?></td>
+            
 
 
             <td><a href="excluir.php?id=<?= $linha['id'] ?>">

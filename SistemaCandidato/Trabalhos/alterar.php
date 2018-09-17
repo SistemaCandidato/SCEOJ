@@ -9,10 +9,11 @@ $datafinal = $_POST['datafinal'];
 $setor = $_POST['setor'];
 $funcao = $_POST['funcao'];
 $tarefas = $_POST['tarefas'];
+$status = $_POST['status'];
 
 include '../sql/conectar.php';
 
-$sql = "update trabalhos set nome='$nome', descricao='$descricao', datainicial='$datainicial', datafinal='$datafinal', setor='$setor', funcao='$funcao', tarefas='$tarefas' where id =$id";
+$sql = "update trabalhos set nome='$nome', descricao='$descricao', datainicial='$datainicial', datafinal='$datafinal', setor='$setor', funcao='$funcao', tarefas='$tarefas', status='$status' where id =$id";
 
 echo $sql;
 

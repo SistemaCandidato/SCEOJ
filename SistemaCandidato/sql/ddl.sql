@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`conhecimentos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `descricao` VARCHAR(255) NOT NULL,
-  `datainicio` DATE NOT NULL,
+  `datainicial` DATE NOT NULL,
   `datafinal` DATE NULL,
   `local` VARCHAR(100) NOT NULL,
   `status` CHAR(1) NOT NULL,

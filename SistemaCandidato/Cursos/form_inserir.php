@@ -7,14 +7,13 @@ and open the template in the editor.
 <html>
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <?php
-       include '../navBar/navBarOFF.php';
+       include '../cabecalho.php';
      ?>  
    <head>
        <meta charset="UTF-8">
        <title>Cursos</title>
    </head>
    <body>
-       <img src="../img/foto.jpg" alt="Foto do Perfil" title="candidato" vspace="5px" hspace="5px" border="5px" align="center"/>
        <br><br>
         <div class="conteiner">
         
@@ -50,13 +49,18 @@ and open the template in the editor.
     <div class="form-group col-md-6">
       <label for="inputQuantidadedeSemestresFinalizados">Quantidade de Semestres Finalizados</label>
       <input type="number" required class="form-control" id="inputQuantidadedeSemestresFinalizados" placeholder="Quantidade de Semestres Finalizados" name="quantidadesemestresfinalizados">
-    </div>         
+    </div> 
+            
+    <div class="form-group col-md-6">
+      <label for="inputStatus">Status</label>
+      <input type="text" required class="form-control" id="inputStatus" placeholder="Status" name="status">
+    </div>            
             
           
     </div>     
     
     <div class="form-group">
-      <input type="submit" class="btn btn-success col-sm-4 offset-8" name="cadastrar" value="Cadastrar!">
+      <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
 
     </div>
   </div>

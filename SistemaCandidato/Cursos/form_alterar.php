@@ -3,7 +3,7 @@
        include '../cabecalho.php';
        $id = $_SESSION['id'];
         include '../sql/conectar.php';
-        $sql = "select id, nome, descricao, datainicial, datafinal, quantidadesemestres, quantidadesemestresfinalizados from cursos where id = $id";
+        $sql = "select id, nome, descricao, datainicial, datafinal, quantidadesemestres, quantidadesemestresfinalizados, status from cursos where id = $id";
         
         $resultado = mysqli_query($conexao, $sql);
         
@@ -55,7 +55,14 @@
     <div class="form-group col-md-6">
       <label for="inputQuantidadedeSemestresFinalizados">Quantidade de Semestres Finalizados</label>
       <input type="number" required class="form-control" id="inputQuantidadedeSemestresFinalizados" placeholder="Quantidade de Semestres Finalizados" name="quantidadesemestresfinalizados" value="<?= $linha['quantidadesemestresfinalizados'] ?>">
-    </div>         
+    </div>    
+            
+    <div class="form-group col-md-6">
+      <label for="inputStatus">Status</label>
+      <input type="text" required class="form-control" id="inputStatus" placeholder="Status" name="status" value="<?= $linha['status'] ?>">
+    </div>          
+            
+            
                   
     </div>        
             

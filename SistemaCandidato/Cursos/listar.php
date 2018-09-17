@@ -11,7 +11,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 <table border="1">
     <tr>
-       <td>Nome</td><td>Descrição</td><td>Data Inicial</td><td>Data Final</td><td>Quantidade de Semestres</td><td>Quantidade de Semestres Finalizados</td><td>Excluir</td><td>Alterar</td>
+        <td>Nome</td><td>Descrição</td><td>Data Inicial</td><td>Data Final</td><td>Quantidade de Semestres</td><td>Quantidade de Semestres Finalizados</td><td>Status</td><td>Excluir</td><td>Alterar</td>
     </tr>
     <?php
     while ($linha = mysqli_fetch_array($resultado)) {
@@ -23,6 +23,8 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $linha['datafinal'] ?></td>
             <td><?= $linha['quantidadesemestres']?></td> 
             <td><?= $linha['quantidadesemestresfinalizados'] ?></td>
+            <td><?= $linha['status'] ?></td>
+            
 
 
             <td><a href="excluir.php?id=<?= $linha['id'] ?>">

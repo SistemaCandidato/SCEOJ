@@ -6,10 +6,12 @@ $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $datainicial = $_POST['datainicial'];
 $datafinal = $_POST['datafinal'];     
+$local = $_POST['local'];
+$status = $_POST['status'];
 
 include '../sql/conectar.php';
 
-$sql = "update conhecimentos set nome='$nome', descricao='$descricao', datainicial='$datainicial', datafinal='$datafinal' where candidatos_id =$id";
+$sql = "update conhecimentos set nome='$nome', descricao='$descricao', datainicial='$datainicial', datafinal='$datafinal', local='$local', status='$status' where candidatos_id =$id";
 
 echo $sql;
 
