@@ -16,3 +16,4 @@ $query = "insert into conhecimentos values (default, '$nome', '$descricao', '$da
 mysqli_query($conexao, $query);
 
 header('Location: form_inserir.php');
+
