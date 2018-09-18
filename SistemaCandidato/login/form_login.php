@@ -31,7 +31,7 @@
                     </div>
                 </form>
             </div>
-     
+
     </body>
 </html>
 
@@ -57,38 +57,53 @@ if (Count($_POST) > 0) {
         return $resultado;
     }
 
-    $result = getLogin($conexao, "select * from administrador where username = '$username' and password = '$password'");
+    $result = getLogin($conexao, "select username,password from administrador where username = '$username' and password = '$password'");
     if ($result != Null) {
         logar($result['username'], $result['id'], "A");
         header('Location: ../index.php');
         die();
     }
 
-    $result = getLogin($conexao, "select * from candidatos where username = '$username' and password = '$password'AND Comp !=0");
+    $result = getLogin($conexao, "select username,password from candidatos where username = '$username' and password = '$password'AND Comp !=0");
     if ($result != Null) {
         logar($result['username'], $result['id'], "C");
         header('Location: ../index.php');
         die();
     }
 
-    $result = getLogin($conexao, "select * from empresas where username = '$username' and password = '$password'AND Comp!=0");
+    $result = getLogin($conexao, "select username,password from empresas where username = '$username' and password = '$password'AND Comp!=0");
     if ($result != Null) {
         logar($result['username'], $result['id'], "E");
         header('Location: ../index.php');
         die();
     }
 
-                
-                 
-             
-   
-    echo '<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<div class="alert alert-danger  col-sm-3 offset-4" align="center" role="alert">
-  Usuário ou senha invalidos, ou você não foi aceito pelo ADM!
-</div></div>';
-    
-}
 
+    $result = getLogin($conexao, "select username,password from candidatos where username = '$username' and password = '$password'AND Comp = 0");
+    if ($result != Null) {
+        echo '<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <div class="alert alert-danger  col-sm-5 offset-3" align="center" role="alert">
+                Você ainda não foi aprovado pelo administrador. Aguarde um pouco ou solicite ajuda!
+            </div></div>';
+    }
+    $result = getLogin($conexao, "select username,password from empresas where username = '$username' and password = '$password'AND Comp = 0");
+    if ($result != Null) {
+        echo '<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <div class="alert alert-danger  col-sm-5 offset-3" align="center" role="alert">
+                Você ainda não foi aprovado pelo administrador. Aguarde um pouco ou solicite ajuda!
+            </div></div>';
+    }
+
+    $result = getLogin($conexao, "select username,password from candidatos where username = '$username' and password = '$password'");
+    if ($result == Null) {
+        echo '<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <div class="alert alert-danger  col-sm-5 offset-3" align="center" role="alert">
+                Usuário não encontrado!
+            </div></div>';
+    }
+
+
+    }
 ?>
 <?php
 include '../cabecalho.php';

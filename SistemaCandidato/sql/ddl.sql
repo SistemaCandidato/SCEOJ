@@ -7,7 +7,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 insert into administrador values (default,"Vinicius","adm","1");
-
 CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -19,9 +18,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   INDEX `id` (`id` ASC),
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
-INSERT INTO candidatos values(default,'vinicius.ng','v','Vinicius NazarÃ­o',18,'Paulo Orlandi','Fabio Silva','170','Casa','TubarÃ£o','SC','viniciusnazario25@gmail.com','36225496','15818181','3113321213',default);
 
-select * from empresas;
+drop table candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -44,12 +42,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   )
 ENGINE = InnoDB;
 
-insert into candidatos values (default,'21A','1','Area1',18,'PAULO ORLANDI','Fabio Silva','170','Casa','Tubarão','SC','2121@FSOAJFSAJH','4836225496','3223','55353',default);
-  drop table candidatos;
--- -----------------------------------------------------
--- Table `mydb`.`candidatos`
--- -----------------------------------------------------
-select * from candidatos;
+drop table candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `id` INT NOT NULL AUTO_INCREMENT,
 `username` VARCHAR(20) NOT NULL,
@@ -67,13 +60,14 @@ CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `rg` VARCHAR(15) NOT NULL,
   `cpf` VARCHAR(15) NOT NULL,
     Comp int default 0,
+datainclusao datetime not null,
    PRIMARY KEY (`id`),
   INDEX `nome` (`nome` ASC),
   UNIQUE INDEX `username` (`username` ASC),
   UNIQUE INDEX `rg` (`rg` ASC),
   UNIQUE INDEX `cpf` (`cpf` ASC),
   UNIQUE INDEX `email` (`email` ASC))
-ENGINE = InnoDB;.
+ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas`

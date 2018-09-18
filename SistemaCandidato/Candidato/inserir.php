@@ -28,7 +28,7 @@ $cpf = $_POST['cpf'];
 
 
 
-$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf',default)");
+$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf',default,NOW())");
  
 echo $smtp;
 //mysqli_query($conexao, $smtp);
