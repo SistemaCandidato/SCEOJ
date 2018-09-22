@@ -1,8 +1,7 @@
 <?php
-include '../login/autenticacao.php';
+
  include '../sql/conectar.php';   
-       autenticar();
-       sessaoExpirada();
+
 
 include '../cabecalho.php';
 

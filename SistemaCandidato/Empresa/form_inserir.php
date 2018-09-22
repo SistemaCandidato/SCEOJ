@@ -31,11 +31,17 @@
                             </div>
                         </div>
                         <div id="div_id_password" class="form-group required">
-                            <label for="id_email" class="control-label col-md-4  requiredField"> Password<span class="asteriskField">*</span> </label>
+                            <label for="id_password" class="control-label col-md-4  requiredField"> Password<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
                                 <input class="input-md emailinput form-control" id="id_Password" name="password" placeholder="Seu password" style="margin-bottom: 10px" type="password" />
                             </div>     
                         </div>
+                    <div id="div_id_password" class="form-group required">
+                            <label for="id_nomefantasia" class="control-label col-md-4  requiredField"> Nome Fantasia<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_nomeFantasia" name="nomefantasia" placeholder="Nome fantasia" style="margin-bottom: 10px" type="text" />
+                            </div>     
+                    
                         <div id="div_id_nome" class="form-group required">
                             <label for="id_password1" class="control-label col-md-4  requiredField">Razão Social<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 "> 
@@ -45,7 +51,7 @@
                         <div id="div_id_idade" class="form-group required">
                              <label for="id_idade" class="control-label col-md-4  requiredField"> Rua<span class="asteriskField">*</span> </label>
                              <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_password2" name="rua" placeholder="Rua" style="margin-bottom: 10px" type="number" />
+                                <input class="input-md textinput textInput form-control" id="id_password2" name="rua" placeholder="Rua" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
                         <div id="div_id_rua" class="form-group required"> 
@@ -82,7 +88,7 @@
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Estado<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" maxlength="2" id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                          <div id="div_id_location" class="form-group required">
@@ -91,6 +97,14 @@
                                 <input class="input-md textinput textInput form-control" id="id_location" name="cnpj" placeholder="CNPJ" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
+                            
+                             <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_location" name="email" placeholder="E-mail" style="margin-bottom: 10px" type="email" />
+                            </div> 
+                        </div>
+               
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Telefone<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">

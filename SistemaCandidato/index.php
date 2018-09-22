@@ -1,7 +1,7 @@
 <?php
 
 include 'cabecalho.php';
-
+require_once '/login/autenticacao.php';
 require_once 'rodape.php';
 
   if (estaLogado()) {
@@ -17,7 +17,7 @@ require_once 'rodape.php';
                 include ($dir . '/menus/menuAdministrador.php');
             }
   }  else {
-            include($dir . './menus/menuOFF.php');
+            include($dir . '/menus/menuOFF.php');
         
             
         }

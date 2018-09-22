@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
   <head>
 

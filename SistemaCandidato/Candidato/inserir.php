@@ -30,8 +30,8 @@ $cpf = $_POST['cpf'];
 
 $smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf',default,NOW())");
  
-echo $smtp;
-//mysqli_query($conexao, $smtp);
+
+mysqli_query($conexao, $smtp);
 
 $message = "
 <h3>Olá $nome</h3><br/>
@@ -50,7 +50,7 @@ $message = "
     <p><b>CPF: $cpf</b></p>
 ";
 
-// Instância do objeto PHPMailer
+
 $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
@@ -78,7 +78,7 @@ endif;
  
 
 
-//header('Location: form_inserir.php');
+header('Location: form_inserir.php');
 
 
 

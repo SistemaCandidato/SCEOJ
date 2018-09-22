@@ -1,11 +1,10 @@
 
 <?php
 
-include '../sql/conectar.php';
       include '../cabecalho.php';
       
 
-
+include '../sql/conectar.php';
 $id = $_SESSION['id'];
 $sql = "select * from candidatos where id = $id";
 

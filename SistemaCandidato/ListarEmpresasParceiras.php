@@ -1,10 +1,10 @@
 
 
 <?php
-require_once './sql/conectar.php';
-include './cabecalho.php';
+require_once '/sql/conectar.php';
+include 'cabecalho.php';
 
-$sql = "select razao,cnpj from empresas";
+$sql = "select nomefantasia,cnpj from empresas";
 
 $resultado = mysqli_query($conexao, $sql);
 
@@ -17,7 +17,7 @@ $resultado = mysqli_query($conexao, $sql);
   <table class="table">
     <thead>
       <tr>
-        <th>Razão Social</th>
+        <th>Nome Fantasia</th>
         <th>Cnpj</th>
      
       </tr>
@@ -26,7 +26,7 @@ $resultado = mysqli_query($conexao, $sql);
     while ($linha = mysqli_fetch_array($resultado)) {
         ?>
         <tr>
-            <td><?= $linha['razao']?></td> 
+            <td><?= $linha['nomefantasia']?></td> 
             <td><?= $linha['cnpj'] ?></td>
         
 

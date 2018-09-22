@@ -6,7 +6,7 @@
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
-insert into administrador values (default,"Vinicius","adm","1");
+
 CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -19,11 +19,12 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-drop table candidatos;
+drop table empresas;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
    password varchar(50) not null,
+   nomefantasia varchar(255) not null,
   `razao` VARCHAR(100) NOT NULL,
   `endereco` VARCHAR(100) NOT NULL,
   `bairro` VARCHAR(100) NOT NULL,
@@ -33,8 +34,10 @@ CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `cidade` VARCHAR(45) NOT NULL,
   `estado` VARCHAR(2) NOT NULL,
   `cnpj` VARCHAR(15) NOT NULL,
+   email varchar(60) NOT NULL,
   `telefone` VARCHAR(16) NOT NULL,
    Comp int default 0,
+   datainclusao datetime not null,
   PRIMARY KEY (`id`),
   INDEX `id` (`id` ASC),
   INDEX `razao` (`razao` ASC),

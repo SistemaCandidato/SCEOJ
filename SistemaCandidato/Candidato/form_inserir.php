@@ -80,7 +80,7 @@
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Estado<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" maxlength="2" id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                          <div id="div_id_location" class="form-group required">
