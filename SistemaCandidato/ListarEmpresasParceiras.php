@@ -2,7 +2,7 @@
 
 <?php
 require_once '/sql/conectar.php';
-include 'cabecalho.php';
+include './cabecalho.php';
 
 $sql = "select nomefantasia,cnpj from empresas";
 

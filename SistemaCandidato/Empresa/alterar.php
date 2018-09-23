@@ -3,6 +3,7 @@
 
 $id = $_POST['id'];
 $username = $_POST['username'];
+$nomefantasia = $_POST['nomefantasia'];
 $razao = $_POST['razao'];
 $endereco= $_POST['endereco'];
 $bairro = $_POST['bairro'];
@@ -15,7 +16,7 @@ $telefone = $_POST['telefone'];
 
 include '../sql/conectar.php';
 
-$sql = "update empresas set username='$username',password='$password',razao='$razao',endereco='$endereco',bairro='$bairro',"
+$sql = "update empresas set username='$username',password='$password','$nomefantasia',razao='$razao',endereco='$endereco',bairro='$bairro',"
         . "numero='$numero',complemento='$complemento,cidade='$cidade',estado='$estado',cnpj='$cnpj',telefone='$telefone' where id =$id";
 
 

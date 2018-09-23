@@ -35,6 +35,12 @@
     <label for="inputPassword">Senha</label>
     <input type="password" required class="form-control" id="inputUsername" placeholder="Senha" name="password" value="<?= $linha['password'] ?>">
   </div>
+            
+    <div class="form-group col-md-6">
+      <label for="inputNome">Nome fantasia</label>
+      <input type="text" required class="form-control" id="inputNome" placeholder="Nome Fantasia" name="nomefantasia" value="<?= $linha['nomefantasia'] ?>">
+    </div>
+  
       
     <div class="form-group col-md-6">
       <label for="inputNome">Razão Social</label>
@@ -76,6 +82,11 @@
       <label for="inputCnpj">CNPJ</label>
       <input  type="text" maxlength="2" required class="form-control"  id="inputEstado" placeholder="CNPJ" name="cnpj" value="<?= $linha['cnpj'] ?>" >
     </div>
+            <div class="form-group col-md-4">
+      <label for="inputEmail">E-mail</label>
+      <input  type="email" required class="form-control"  id="inputEstado" placeholder="E-mail" name="email" value="<?= $linha['email'] ?>" >
+    </div>
+    
     
       
       <div class="form-group col-sm-6 ">
