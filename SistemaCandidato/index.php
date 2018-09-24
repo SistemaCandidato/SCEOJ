@@ -1,7 +1,7 @@
 <?php
 
 include 'cabecalho.php';
-require_once '/login/autenticacao.php';
+require_once './login/autenticacao.php';
 require_once 'rodape.php';
 
   if (estaLogado()) {

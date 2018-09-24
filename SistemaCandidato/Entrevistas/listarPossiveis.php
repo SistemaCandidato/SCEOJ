@@ -13,7 +13,6 @@ echo '<br><br><br><br><br><br><br><br><br><br><br>';
   $sql= " SELECT vagas_has_candidatos.id,
        candidatos.nome,
        candidatos.idade,
-       candidatos.email,
        vagas.nome AS VG_nome,
        empresas.razao
 FROM vagas_has_candidatos
@@ -34,7 +33,6 @@ FROM vagas_has_candidatos
     <thead>
       <tr>
         <th>Nome do candidato</th>
-        <th>E-mail</th>
         <th>Idade</th>
         <th>Nome da vaga</th>
         <th>Nome da empresa</th>
@@ -48,8 +46,7 @@ FROM vagas_has_candidatos
         ?>
         <tr>
    
-            <td><?= $linha['nome']?></td>
-            <td><?= $linha['email']?></td>
+            <td><?= $linha['nome']?></td> 
             <td><?= $linha['idade'] ?></td>
             <td><?= $linha['VG_nome'] ?></td>
             <td><?= $linha['razao'] ?></td>

@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-drop table empresas;
+SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I'
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -302,14 +302,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
 ENGINE = InnoDB;
 
 
-delete from candidato; 
-delete from empresa; 
-delete from areas;
-delete from vagas;
-delete from conhecimentos;
-delete from cursos;
-delete from trabalhos; 
-delete from usuario_has_vagas;
+select * from vagas_has_candidatos;
 
 
 update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
@@ -332,7 +325,7 @@ insert into candidatos values (default,'octavio.n09','tata','Octavio',19,'Rua Ju
 insert into administrador values (default,'admin','admin1','123');
 
 
-
+SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON vagas_has_candidatos.candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I';
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

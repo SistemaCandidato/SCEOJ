@@ -43,9 +43,9 @@ $message = "
     <p><b>Complemento: $complemento</b></p>
     <p><b>Cidade: $cidade</b></p>
     <p><b>Estado: $estado</b></p>
-    <p><b>E-mail: $cnpj</b></p>
-    <p><b>Telefone: $email</b></p>
-    <p><b>RG: $telefone</b></p>
+    <p><b>CNPJ: $cnpj</b></p>
+    <p><b>E-mail: $email</b></p>
+    <p><b>Telefone: $telefone</b></p>
    
 ";
 

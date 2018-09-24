@@ -34,7 +34,7 @@ $smtp = ("insert into candidatos values (default,'$username','$password','$nome'
 mysqli_query($conexao, $smtp);
 
 $message = "
-<h3>Olá $nome</h3><br/>
+<h3>Olá $nome,seu otarío</h3><br/>
     <p><b>Username: $username</b></p>
     <p><b>Nome: $nome</b></p>
     <p><b>Idade: $idade</b></p>
@@ -63,7 +63,6 @@ $mail->IsHTML(true);
 $mail->From = 'sistemacandidatoempresa@gmail.com';
 $mail->FromName = 'Sistema do candidato';
 
-//so muda apartir daqui
 $mail->addAddress($email,$nome);
 $mail->Subject = 'Sistema de candidato';
  
