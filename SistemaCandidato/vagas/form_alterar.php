@@ -1,11 +1,7 @@
 
         <?php
         include '../../sql/conectar.php';
-        include '../../login/autenticacao.php';
-   
-       autenticar();
-       sessaoExpirada();
-       
+
    
        include '../cabecalho.php';
        $id = $_SESSION['id'];

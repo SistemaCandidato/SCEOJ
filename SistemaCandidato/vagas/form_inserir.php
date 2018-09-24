@@ -10,8 +10,6 @@ and open the template in the editor.
         <title></title>
         
         <?php
-        include '../sql/conectar.php';
-
 
         include '../cabecalho.php';
         

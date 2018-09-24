@@ -1,5 +1,8 @@
 
 <?php
+require_once '../login/autenticacao.php';
+include '../sql/conectar.php';
+
 
 $datainicio = $_POST['datainicio'];
 $datafinal = $_POST['datafinal'];
@@ -12,7 +15,7 @@ $valealimentacao = $_POST['valealimentacao'];
 $ajudadecusto = $_POST['ajudadecusto'];
 $id = $_SESSION['id'];
 $Areas_id=$_POST['Areas_id'];
-include '../sql/conectar.php';
+
 
 $query = "insert into vagas values (default,'$datainicio','$datafinal','$nome','$descricao','$salario','$periodo','$obs','$valealimentacao','$ajudadecusto',$id,$Areas_id)";
 

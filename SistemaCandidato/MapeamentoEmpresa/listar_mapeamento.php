@@ -8,14 +8,14 @@ $candidato = $_SESSION['id'];
 $Areas_id = str_replace(" ", "%", $_GET['q']);
 
 $sql  = " SELECT ";
-$sql .= "   VG.id AS ID,       ";
+$sql .= "   Curso.id AS ID,       ";
 $sql .= "   AR.nome AS AREA,   ";
 $sql .= "   VG.nome AS VAGA,   ";
 $sql .= "   EP.razao AS RAZAO, ";
 $sql .= "   EP.cidade AS CIDADE,  ";
 $sql .= "   EP.estado AS UF,  ";
 $sql .= "   IFNULL((SELECT VG_CD.status FROM vagas_has_candidatos VG_CD WHERE VG_CD.vagas_id = VG.id AND VG_CD.candidatos_id = $candidato AND status NOT IN ('D') LIMIT 1),'') AS STATUS, ";
-$sql .= "   IFNULL(( SELECT ET.id FROM entrevistas ET where ET.status NOT IN ('D') AND ET.vagas_has_candidatos_id =  IFNULL((SELECT VG_CD.id FROM vagas_has_candidatos VG_CD WHERE VG_CD.vagas_id = VG.id AND VG_CD.candidatos_id = $candidato AND status NOT IN ('D') LIMIT 1),0) LIMIT 1 ),0) AS ENTREVISTA ";
+$sql .= "   IFNULL(( SELECT ET.id FROM entrevistas ET where ET.status NOT IN ('D') AND ET.vagas_has_candidatos_id =  IFNULL((SELECT VG_CD.id FROM vagas_has_candidatos VG_CD WHERE VG_CD.vagas_id = VG.id AND VG_CD.candidatos_id = $candidato AND status NOT IN ('D') LIMIT 1),0)),0) AS ENTREVISTA ";
 
 $sql .= " FROM vagas VG ";
 $sql .= "   INNER JOIN empresas EP ON ";
@@ -34,8 +34,6 @@ $sql .= "     OR AR.nome LIKE '%$Areas_id%' ";
 $sql .= "     OR AR.descricao LIKE '%$Areas_id%' ";
 $sql .= "   ) ";
 
-echo '<br><br><br><br><br>';
-echo $sql;
 $resultado = mysqli_query($conexao, $sql);
 
 ?>

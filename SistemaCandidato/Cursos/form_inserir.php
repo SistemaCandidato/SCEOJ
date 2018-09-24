@@ -19,12 +19,12 @@ and open the template in the editor.
         
             <div class="row col-sm-6 offset-3" >
                 
-       <form method="post" action="inserir.php">
+                <form method="post" action="inserir.php">
            
         <div class="form-row">
       <div class="form-group  col-md-6" >
     <label for="inputUsername">Nome</label>
-    <input type="text" required class="form-control" id="inputUsername" placeholder="Login" name="username">
+    <input type="text" required class="form-control" id="inputUsername" placeholder="Nome" name="nome">
   </div>
          <div class="form-group  col-md-6" >
     <label for="inputDescrição">Descrição</label>
@@ -56,17 +56,18 @@ and open the template in the editor.
       <input type="text" required class="form-control" id="inputStatus" placeholder="Status" name="status">
     </div>            
             
-          
+       
     </div>     
-    
-    <div class="form-group">
-      <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
 
+    <div class="form-group">
+      <input type="submit" class="btn btn-success col-sm-20 offset-20" value="Cadastrar!">
+  
     </div>
   </div>
 
-
-                  </div>
+        </div>
+       
+     
     </body>
 </html>
 

@@ -1,5 +1,5 @@
 <?php
-
+include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
  include '../sql/conectar.php';   
 
 
@@ -21,17 +21,51 @@ $query = "insert into entrevistas values (default,'$data','$horario','$status','
 mysqli_query($conexao, $query);
 
 
+
+  $nome =$_GET['nome'];
+  $email = $_GET['email'];
+$message = "
+<h3>Olá $nome</h3><br/>
+    <p><b>Data: $data</b></p>
+    <p><b>Horario: $horario</b></p>
+    <p><b>Observação: $obs</b></p>
+ 
+";
+
+
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'sistemacandidatoempresa@gmail.com';
+$mail->Password = 'candidato123';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$mail->IsHTML(true);
+$mail->From = 'sistemacandidatoempresa@gmail.com';
+$mail->FromName = 'Sistema do candidato';
+
+//so muda apartir daqui
+$mail->addAddress($email,$nome);
+$mail->Subject = 'Sistema de candidato';
+ 
+$mail->Body = $message;
+ 
+if($mail->Send()):
+    echo 'Enviado com sucesso !';
+else:
+    echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
+endif;
+
+
+
 $queryUpdate = "update vagas_has_candidatos set status='A' where id =$id";
 
-echo $queryUpdate;
 mysqli_query($conexao, $queryUpdate);
 
 header('Location: listarPossiveis.php');
 die();
 }
-     
-     
-       
 
 
 ?>
