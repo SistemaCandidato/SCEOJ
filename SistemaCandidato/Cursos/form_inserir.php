@@ -61,8 +61,11 @@ and open the template in the editor.
 
     <div class="form-group">
       <input type="submit" class="btn btn-success col-sm-20 offset-20" value="Cadastrar!">
-  
     </div>
+                    
+    <h5 class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Cursos/listar.php">Ver Cursos</a>
+            </h5>                 
   </div>
 
         </div>
@@ -70,6 +73,3 @@ and open the template in the editor.
      
     </body>
 </html>
-
-
-

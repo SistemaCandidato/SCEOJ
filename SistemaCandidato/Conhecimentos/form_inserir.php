@@ -24,7 +24,7 @@ and open the template in the editor.
       <div class="form-row">
       <div class="form-group  col-md-6" >
     <label for="inputUsername">Nome</label>
-    <input type="text" required class="form-control" id="inputUsername" placeholder="Login" name="username">
+    <input type="text" required class="form-control" id="inputUsername" placeholder="Nome" name="username">
   </div>
          <div class="form-group  col-md-6" >
     <label for="inputDescrição">Descrição</label>
@@ -55,8 +55,11 @@ and open the template in the editor.
     
     <div class="form-group">
       <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
-
     </div>
+           
+    <h5 class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Conhecimentos/listar.php">Ver Conhecimentos</a>
+            </h5>         
   </div>
 
 

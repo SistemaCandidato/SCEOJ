@@ -308,10 +308,15 @@ select * from vagas_has_candidatos;
 update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
 update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
 
-insert into conhecimentos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '18/12/2018', '2');
-insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', '3', '2', '2');
-insert into trabalhos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017/12/18', '2018/08/09', 'Computacao', 'Java', 'Implementar o codigo', '2');
+insert into conhecimentos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', 'IFSC', 'Java',default);
 
+insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', '3', '2', 'Java',default);
+
+insert into trabalhos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', '3', '2', 'Computacao', 'Programador', 'Implementacao de Java', 'Java',default);
+
+insert into empresas values (default,'ricardo.223','rica223','Computacao','Trier Sistemas','Rua Julio Cesar Marcolino','Centro','73','754848','501','Tubarao','SC','345161','ricardosilva@gmail.com','984136487',default);
+
+insert into candidatos values (default,'ricardo.s4','rica24','Ricardo',17,'Rua Julio Cesar Marcolino','Centro','73','501','Tubarao','SC','ricardosilva@gmail.com','984136487','236851','437257669-02',default);
 
 select vagas.nome from vagas;
 select * from candidato where id ='1';

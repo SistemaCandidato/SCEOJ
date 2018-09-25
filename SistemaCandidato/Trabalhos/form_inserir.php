@@ -19,12 +19,12 @@ and open the template in the editor.
         
             <div class="row col-sm-6 offset-3" >
                 
-       <form method="post" action="inserir.php">
+        <form method="post" action="inserir.php">
            
         <div class="form-row">
       <div class="form-group  col-md-6" >
     <label for="inputUsername">Nome</label>
-    <input type="text" required class="form-control" id="inputUsername" placeholder="Login" name="username">
+    <input type="text" required class="form-control" id="inputUsername" placeholder="Nome" name="username">
   </div>
          <div class="form-group  col-md-6" >
     <label for="inputDescrição">Descrição</label>
@@ -73,11 +73,14 @@ and open the template in the editor.
             
           
     </div>     
-    
+          
     <div class="form-group">
       <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
-
     </div>
+            
+    <h5 class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Trabalhos/listar.php">Ver Trabalhos</a>
+            </h5>        
   </div>
 
 
