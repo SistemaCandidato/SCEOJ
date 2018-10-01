@@ -67,10 +67,14 @@ and open the template in the editor.
         <div class="input-group">
           <input type="text" class="form-control" name="q" placeholder="Pesquisar mapeamento">          
         </div>
+             </form>
           </ul>
         </div>
       </div>
     </nav>
+      
+    </nav>
+      
   </body>
     <header class="masthead" style="background-image: url('./img/about-bg.jpg')">
       <div class="overlay"></div>
