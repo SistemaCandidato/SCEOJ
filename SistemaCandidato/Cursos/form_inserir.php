@@ -57,7 +57,8 @@ and open the template in the editor.
     </div>            
             
        
-    </div>     
+    </div> 
+                </form>
 
     <div class="form-group">
       <input type="submit" class="btn btn-success col-sm-20 offset-20" value="Cadastrar!">

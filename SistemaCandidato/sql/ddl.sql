@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I'
+
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+select * from candidatos;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`conhecimentos`

@@ -4,11 +4,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+ <?php
+       include '../cabecalho.php';
+      
+     ?>  
 <html>
     <link href="../css/bootstrap.css" rel="stylesheet" />
-    <?php
-       include '../cabecalho.php';
-     ?>  
+   <br><br><br><br>
    <head>
        <meta charset="UTF-8">
        <title>Conhecimentos</title>
@@ -51,12 +53,13 @@ and open the template in the editor.
       <input type="text" required class="form-control" id="inputStatus" placeholder="Status" name="status">
     </div>        
           
-    </div>     
+    </div>   
+      
     
     <div class="form-group">
       <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
     </div>
-           
+        </form>    
     <h5 class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/Conhecimentos/listar.php">Ver Conhecimentos</a>
             </h5>         

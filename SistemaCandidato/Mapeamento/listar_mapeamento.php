@@ -34,8 +34,6 @@ $sql .= "     OR AR.nome LIKE '%$Areas_id%' ";
 $sql .= "     OR AR.descricao LIKE '%$Areas_id%' ";
 $sql .= "   ) ";
 
-echo '<br><br><br><br><br>';
-echo $sql;
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
