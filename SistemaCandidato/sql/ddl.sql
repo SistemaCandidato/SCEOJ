@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `telefone` VARCHAR(16) NOT NULL,
   `rg` VARCHAR(15) NOT NULL,
   `cpf` VARCHAR(15) NOT NULL,
+  `foto` VARCHAR(100) NOT NULL,
     Comp int default 0,
 datainclusao datetime not null,
    PRIMARY KEY (`id`),
@@ -308,12 +309,6 @@ select * from vagas_has_candidatos;
 update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
 update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
 
-insert into conhecimentos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', 'IFSC', 'Java',default);
-
-insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', '3', '2', 'Java',default);
-
-insert into trabalhos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '09/08/2017', '06/12/2018', '3', '2', 'Computacao', 'Programador', 'Implementacao de Java', 'Java',default);
-
 insert into empresas values (default,'ricardo.223','rica223','Computacao','Trier Sistemas','Rua Julio Cesar Marcolino','Centro','73','754848','501','Tubarao','SC','345161','ricardosilva@gmail.com','984136487',default);
 
 insert into candidatos values (default,'ricardo.s4','rica24','Ricardo',17,'Rua Julio Cesar Marcolino','Centro','73','501','Tubarao','SC','ricardosilva@gmail.com','984136487','236851','437257669-02',default);
@@ -322,8 +317,19 @@ select vagas.nome from vagas;
 select * from candidato where id ='1';
 insert into administrador values (default,'administrador','$123','$Vinicius');
 
+delete from conhecimentos;
+delete from cursos;
+delete from trabalhos;
 
+drop table conhecimentos;
+drop table cursos;
+drop table trabalhos;
 
+insert into conhecimentos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'IFSC', 'Andamento','',);
+
+insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', '3', '2', 'Andamento', '',);
+
+insert into trabalhos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'Computacao', 'Programador', 'Implementacao de Java', 'Andamento', '',);
 
 insert into candidatos values (default,'octavio.n09','tata','Octavio',19,'Rua Julio Francisco Regis','Vila Moema','43','401','Tubarao','SC','octavionaspolinineto@gmail.com','996178590','454663','065717565-01',default)
 
