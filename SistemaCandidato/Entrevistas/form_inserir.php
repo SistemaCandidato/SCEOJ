@@ -23,8 +23,8 @@ mysqli_query($conexao, $query);
 
 $queryUpdate = "update vagas_has_candidatos set status='A' where id =$id";
 
-
-
+mysqli_query($conexao, $queryUpdate);
+    
 header('Location: listarPossiveis.php');
 die();
 }

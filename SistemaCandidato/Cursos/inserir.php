@@ -1,6 +1,8 @@
 <?php
 
 include '../sql/conectar.php';
+include_once '../login/autenticacao.php';
+
 
 
 $nome = $_POST['nome'];
