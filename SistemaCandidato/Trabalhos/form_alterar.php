@@ -69,10 +69,12 @@
                   
     </div>        
             
-    <div class="form-group">
-    <input type="submit" class="btn btn-success col-sm-4 offset-8" value="Alterar">
-
-    </div>
+    <div class="form-group"> 
+        <div class="aab controls col-md-4 "></div>
+        <div class="controls col-md-8 ">
+        <input type="submit"value="Alterar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                 
+      </div>
   </div>
 
 

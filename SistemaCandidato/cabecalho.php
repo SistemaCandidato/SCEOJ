@@ -15,20 +15,20 @@
    
         if (estaLogado()) {
              if (isMyType("E")) {
-                 include($dir . '/navBar/navBarEmpresa.inc');
+                 include($dir . 'navBar/navBarEmpresa.inc');
                
              }
             if (isMyType("C")){
-                include($dir . '/navBar/navBarCandidato.php');
+                include($dir . 'navBar/navBarCandidato.php');
                 
             }
             if (isMyType("A")) {
-                include ($dir . '/navBar/navBarAdministrador.php');
+                include ($dir . 'navBar/navBarAdministrador.php');
             }
             
             echo 'Bem vindo ' . exibirUsername();
         } else {
-            include($dir . './navBar/navBarOFF.php');
+            include($dir . 'navBar/navBarOFF.php');
         
             
         }

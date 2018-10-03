@@ -112,7 +112,7 @@
                         <div id="div_id_location" class="form-group required">    
                             <tr>
                             <td>Imagem:</td>
-                            <td><input type="file" name="foto_filme" size="50"></td>
+                            <td><input type="file" name="foto" size="50"></td>
                             </tr>
                         </div>
                         </div>
