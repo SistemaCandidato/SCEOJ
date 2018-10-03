@@ -1,5 +1,6 @@
 <?php
-include '../cabecalho.php';
+
+    require_once '../cabecalho.php';
 ?>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -47,16 +48,3 @@ include '../cabecalho.php';
         </div>
     </div>
 </div>
-
-
-
-
-<?php 
-    
-
-    //verifica se existe uma mensagem na sessão
-    if( isset( $_SESSION['mensagem'] ) )
-    {
-        $mensagem = $_SESSION['mensagem'];
-    }
-?>
