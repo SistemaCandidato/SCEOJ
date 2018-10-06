@@ -42,7 +42,7 @@
               <a class="nav-link" href="http://localhost/SistemaCandidato/Empresa/form_inserir.php">Cadastro de empresas</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="http://localhost/SistemaCandidato/ListarEmpresasParceiras.php">Empresas parceiras</a>
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Empresa/ListarEmpresasParceiras.php">Empresas parceiras</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/login/form_login.php">Login</a>

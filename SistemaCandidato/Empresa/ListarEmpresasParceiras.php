@@ -1,11 +1,10 @@
 
 
 <?php
-require_once 'sql/conectar.php';
-require_once 'cabecalho.php'; 
+require_once '../sql/conectar.php';
+require_once '../cabecalho.php'; 
 
 $sql = "select nomefantasia,cnpj from empresas";
-
 $resultado = mysqli_query($conexao, $sql);
 
 ?>

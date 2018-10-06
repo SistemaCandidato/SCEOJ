@@ -14,9 +14,9 @@ $id = $_SESSION['id'];
 
 $query = "insert into conhecimentos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$local', '$status','$id')";
 
-echo $query;
+
 
 mysqli_query($conexao, $query);
-//header('Location: form_inserir.php');
+header('Location: form_inserir.php');
 
 

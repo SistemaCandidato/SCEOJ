@@ -12,15 +12,14 @@ $datafinal = $_POST['datafinal'];
 $quantidadesemestres = $_POST['quantidadesemestres'];
 $quantidadesemestresfinalizados = $_POST['quantidadesemestresfinalizados'];
 $status = $_POST['status'];
-$candidato_id = $_POST['candidato_id'];
+
 
 
 $id = $_SESSION['id'];
 
-$query = "insert into cursos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$quantidadesemestres', '$quantidadesemestresfinalizados', '$status', '$id',$candidato_id)";
+$query = "insert into cursos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$quantidadesemestres', '$quantidadesemestresfinalizados', '$status', '$id')";
 
-echo $query;
-exit();
+
 
 mysqli_query($conexao, $query);
 

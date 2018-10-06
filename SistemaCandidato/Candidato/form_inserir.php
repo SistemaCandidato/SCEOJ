@@ -1,5 +1,87 @@
 <?php
     require_once '../cabecalho.php';
+
+    include '../sql/conectar.php';
+    include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
+
+
+if(Count($_POST) > 0){
+
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$nome = $_POST['nome'];
+$idade= $_POST['idade'];
+$rua = $_POST['rua'];
+$bairro = $_POST['bairro'];
+$numero = $_POST['numero'];
+$complemento = $_POST['complemento'];
+$cidade = $_POST['cidade'];
+$estado = $_POST['estado'];
+$email = $_POST['email'];
+$telefone= $_POST['telefone'];
+$rg = $_POST['rg'];
+$cpf = $_POST['cpf'];
+
+
+   	 
+
+
+
+$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf',default,NOW())");
+ 
+
+mysqli_query($conexao, $smtp);
+   
+
+$message = "
+<h3>Olá $nome,seu cadastro foi concluído</h3><br/>
+    <p><b>Username: $username</b></p>
+    <p><b>Nome: $nome</b></p>
+    <p><b>Idade: $idade</b></p>
+    <p><b>Rua: $rua</b></p>
+    <p><b>Bairro: $bairro</b></p>
+    <p><b>Numero: $numero</b></p>
+    <p><b>Complemento: $complemento</b></p>
+    <p><b>Cidade: $cidade</b></p>
+    <p><b>Estado: $estado</b></p>
+    <p><b>E-mail: $email</b></p>
+    <p><b>Telefone: $telefone</b></p>
+    <p><b>RG: $rg</b></p>
+    <p><b>CPF: $cpf</b></p>
+";
+
+
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'sistemacandidatoempresa@gmail.com';
+$mail->Password = 'candidato123';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$mail->IsHTML(true);
+$mail->From = 'sistemacandidatoempresa@gmail.com';
+$mail->FromName = 'Sistema do candidato';
+
+$mail->addAddress($email,$nome);
+$mail->Subject = 'Sistema de candidato';
+ 
+$mail->Body = $message;
+ 
+if($mail->Send()):
+    echo 'Enviado com sucesso !';
+else:
+    echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
+endif;
+
+
+
+   echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !!!'
+            );</script>");
+}
+
+
 ?>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -18,7 +100,7 @@
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
             </div>  
             <div class="panel-body" >
-                <form method="post" action="inserir.php" enctype="multipart/form-data">
+                <form method="post" action="#" enctype="multipart/form-data">
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
                             
     

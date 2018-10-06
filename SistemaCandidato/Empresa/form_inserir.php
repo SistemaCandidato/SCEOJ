@@ -1,5 +1,83 @@
 <?php
     require_once '../cabecalho.php';
+    
+include '../sql/conectar.php';
+include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
+
+
+if(Count($_POST) > 0){
+$username = $_POST['username'];
+$password = $_POST['password'];
+$nomefantasia = $_POST['nomefantasia'];
+$razao= $_POST['razao'];
+$rua = $_POST['rua'];
+$bairro = $_POST['bairro'];
+$numero = $_POST['numero'];
+$cep = $_POST['cep'];
+$complemento = $_POST['complemento'];
+$cidade = $_POST['cidade'];
+$estado = $_POST['estado'];
+$cnpj = $_POST['cnpj'];
+$email = $_POST['email'];
+$telefone = $_POST['telefone'];
+
+
+
+
+$query = "insert into empresas values (default,'$username','$password','$nomefantasia','$razao','$rua','$bairro','$numero','$cep','$complemento','$cidade','$estado','$cnpj','$email','$telefone',default,NOW())";
+
+mysqli_query($conexao, $query);
+
+$message = "
+<h3>Olá $razao você se cadastrou no Stc</h3><br/>
+    <p><b>Username: $username</b></p>
+    <p><b>Nome: $nomefantasia</b></p>
+    <p><b>Idade: $razao</b></p>
+    <p><b>Rua: $rua</b></p>
+    <p><b>Bairro: $bairro</b></p>
+    <p><b>Numero: $numero</b></p>
+    <p><b>Complemento: $complemento</b></p>
+    <p><b>Cidade: $cidade</b></p>
+    <p><b>Estado: $estado</b></p>
+    <p><b>CNPJ: $cnpj</b></p>
+    <p><b>E-mail: $email</b></p>
+    <p><b>Telefone: $telefone</b></p>
+   
+";
+
+// Instância do objeto PHPMailer
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'sistemacandidatoempresa@gmail.com';
+$mail->Password = 'candidato123';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$mail->IsHTML(true);
+$mail->From = 'sistemacandidatoempresa@gmail.com';
+$mail->FromName = 'Sistema do candidato';
+
+//so muda apartir daqui
+$mail->addAddress($email,$nomefantasia);
+$mail->Subject = 'Sistema de candidato';
+ 
+$mail->Body = $message;
+ 
+if($mail->Send()):
+    echo 'Enviado com sucesso !';
+else:
+    echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
+endif;
+
+
+
+ echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !!!'
+            );</script>");
+
+
+}
+
 ?>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -18,7 +96,7 @@
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
             </div>  
             <div class="panel-body" >
-                <form method="post" action="inserir.php">
+                <form method="post" action="#"
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
                             
 
@@ -111,22 +189,23 @@
                                 <input class="input-md textinput textInput form-control" id="id_location" name="telefone" placeholder="Telefone" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
-                   
-
+                      
+   
                         <div class="form-group"> 
                             <div class="aab controls col-md-4 "></div>
                             <div class="controls col-md-8 ">
                                 <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
-                 
+            
                             </div>
-                        </div> 
-                            
-                    </form>
-
-               
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
+                          
+                   
 
-</div>       
+               
+   
