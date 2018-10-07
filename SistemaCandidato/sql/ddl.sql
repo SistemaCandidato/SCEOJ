@@ -2,6 +2,9 @@
 -- Sun Jun  3 16:46:21 2018
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
+select * from candidatos;
+
+
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -19,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-
+select * from trabalhos;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,

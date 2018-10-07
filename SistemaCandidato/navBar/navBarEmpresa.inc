@@ -59,6 +59,9 @@ and open the template in the editor.
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/Entrevistas/listarPossiveis.php">Cadastrar entrevistas</a>
             </li>
+               <li class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/MapeamentoEmpresa/listar_mapeamento.php">Procurar um candidato</a>
+            </li>
              
           </ul>
         </div>
