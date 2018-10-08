@@ -47,14 +47,9 @@ and open the template in the editor.
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="http://localhost/SistemaCandidato/Empresa/listar.php">Ver sua conta</a>
-            </li>
+     
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/vagas/form_inserir.php">Cadastro de vagas</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="http://localhost/SistemaCandidato/login/logout.php">Sair</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/Entrevistas/listarPossiveis.php">Cadastrar entrevistas</a>
@@ -62,13 +57,18 @@ and open the template in the editor.
                <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/MapeamentoEmpresa/listar_mapeamento.php">Procurar um candidato</a>
             </li>
-             
+              <li class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Entrevistas/ListarEntrevistas.php">Listar entrevistas</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/login/logout.php">Sair</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </body>
-    <header class="masthead" style="background-image: url('./img/about-bg.jpg')">
+    <header class="masthead" style="background-image: url('img/about-bg.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">

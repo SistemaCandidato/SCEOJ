@@ -1,6 +1,6 @@
 <?php
 
-$conexao = mysqli_connect("localhost", "root", "", "Teste", "3306");
+$conexao = mysqli_connect("localhost", "root", "ifsc", "Teste", "3306");
 
 
 

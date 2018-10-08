@@ -25,7 +25,7 @@ FROM vagas_has_candidatos
     $resultado = mysqli_query($conexao, $sql);
 
 ?>
-
+    
 <div class="container">
   <p>Candidatos que ficaram interessados nas suas vagas</p>                                                                                      
   <div class="table-responsive">          
@@ -67,7 +67,7 @@ FROM vagas_has_candidatos
   </table>
 
 
-
+ 
 
     </body>
 </html>
