@@ -73,39 +73,15 @@ and open the template in the editor.
             
           
     </div>   
-            
-    <?php
-            include '../sql/conectar.php';
-
-            $query = "select * from candidatos order by nome";
-            
-            $retorno = mysqli_query($conexao, $query);
-            ?>
-
-        <select class="form-group col-md-4" name="candidatos_id">
-
-<?php
-            while ($linha = mysqli_fetch_array($retorno)) {
-    ?>
-                    
-                  <option value="<?= $linha['id'] ?>"><?= $linha['nome'] ?>
-                  </option>
-
-                    <?php
-                }
-                ?>
-            </select>         
-          
-    <div class="form-group">
-      <input type="submit" class="btn btn-success col-sm-20 offset-20" name="cadastrar" value="Cadastrar!">
-    </div>
-            
-    <h5 class="nav-item">
-              <a class="nav-link" href="http://localhost/SistemaCandidato/Trabalhos/listar.php">Ver Trabalhos</a>
-            </h5>        
-  </div>
-
-
-                  </div>
+    <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Signup" value="Cadastrar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                 
+                            </div>
+                        </div> 
+      </div>
+       </form>          
+    </div>         
     </body>
 </html>

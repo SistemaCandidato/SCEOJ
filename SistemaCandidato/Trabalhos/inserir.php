@@ -1,7 +1,7 @@
 <?php
 
 include '../sql/conectar.php';
-
+include_once '../login/autenticacao.php';
 
 
 $nome = $_POST['nome'];
@@ -12,15 +12,11 @@ $setor = $_POST['setor'];
 $funcao = $_POST['funcao'];
 $tarefas = $_POST['tarefas'];
 $status = $_POST['status'];
-$candidato_id = $_POST['candidato_id'];
 
 $id = $_SESSION['id'];
 
 
-$query = "insert into trabalhos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$setor', '$funcao', '$tarefas', '$status', '$id',$candidato_id)";
-
-echo $query;
-exit();
+$query = "insert into trabalhos values (default, '$nome', '$descricao', '$datainicial', '$datafinal', '$setor', '$funcao', '$tarefas', '$status', '$id')";
 
 mysqli_query($conexao, $query);
 
