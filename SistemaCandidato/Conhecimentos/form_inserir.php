@@ -69,8 +69,6 @@ and open the template in the editor.
       
 
     </div>     
-s
-
 
       
 
