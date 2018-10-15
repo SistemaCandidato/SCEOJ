@@ -19,17 +19,19 @@ $resultado = mysqli_query($conexao, $sql);
   <table class="table table-sm ">
   <thead>
     <tr>
-      <th scope="col">Login</th>
-      <th scope="col">Senha</th>
-      <th scope="col">Razão Social</th>
-      <th scope="col">Endereço</th>
-      <th scope="col">Bairro</th>
-      <th scope="col">Número</th>
-      <th scope="col">Complemento</th>
-      <th scope="col">Cidade</th>
-      <th scope="col">Estado</th>
-      <th scope="col">CNPJ</th>
-      <th scope="col">Telefone</th>
+      <th>Login</th>
+      <th>Senha</th>
+      <th>Razão Social</th>
+      <th>Endereço</th>
+      <th>Bairro</th>
+      <th>Número</th>
+      <th>Complemento</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>CNPJ</th>
+      <th>Telefone</th>
+      <th>Excluir</th>
+      <th>Alterar</th>
       
     </tr>
   </thead>

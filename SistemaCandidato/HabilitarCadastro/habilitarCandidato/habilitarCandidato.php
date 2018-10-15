@@ -4,12 +4,8 @@
 ini_set("display_errors", true);
 
 include '../../sql/conectar.php';
-include '../../login/autenticacao.php';
-   
-       autenticar();
-       sessaoExpirada();
-       
-       include '../../cabecalho.php';
+ 
+include '../../cabecalho.php';
 $sql = "select * from candidatos where Comp = 0";
 $resultado = mysqli_query($conexao, $sql);
 
@@ -37,10 +33,10 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $linha['cpf']?></td>
             
             <td><a href="excluir.php?id=<?= $linha['id']?>">
-                    <img src="../../imagens/excluir.png" class="img-thumbnail" width="50"/></a></td>
+                    <img src="../../imagens/excluir.png"  width="50"/></a></td>
               
                     <td align="center"><a href="confirmar.php?id=<?= $linha['id']?>">
-                      <img src="../../imagens/confirmar.png" class="img-thumbnail" width="50"/></a></td>
+                      <img src="../../imagens/confirmar.png" width="50"/></a></td>
                 
               
         </tr>

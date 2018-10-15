@@ -3,21 +3,23 @@ include '../cabecalho.php';
 include '../sql/conectar.php';
 
 $id = $_SESSION['id'];
-$sql = "select * from vagas where empresa_id = $_SESSION[id]";
+$sql = "select * from vagas where id_empresa = $_SESSION[id]";
 
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
-
+<br><br><br>
 <script type="text/javascript" src="../Java/alertaExclusao.js"></script>;
 <div class="container">
-  <p>Aqui está seu cadastro, pense bem antes de excluir seus dados</p>                                                                                      
+  <p>Todas as vagas cadastradas pela sua empresa estão aqui</p>                                                                                      
   <div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
         <th>Nome</th>
         <th>Descrição</th>
+        <th>Excluir</th>
+        <th>Alterar</th>
         
       </tr>
     </thead>
@@ -33,7 +35,7 @@ $resultado = mysqli_query($conexao, $sql);
               <img src="../imagens/excluir.png" height="30" width="30"/></a></td>
 
             <td><a href="form_alterar.php?id=<?= $linha['id'] ?>">
-                    <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
+                    <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>     
         </tr>
         <?php
     }

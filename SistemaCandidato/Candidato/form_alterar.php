@@ -12,40 +12,26 @@
 
         ?>
 
-<html>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <head>
-        <meta charset="UTF-8">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <title></title>
-    </head>
-    <body>
-        
-
-
-        <br><br>
-        <div class="conteiner">
-        
-        <div class="row col-sm-6 offset-14" >
-        
-            <form action="alterar.php" method="post">
-                <input type="hidden" name="id" value="<?= $id ?>">
+<!------ Include the above in your HEAD tag ---------->
 
 
 
-  
+<div class="container">    
             
-    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-9 col-md-offset-7 col-sm-8">
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <div class="panel-title">Sign Up</div>
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
             </div>  
             <div class="panel-body" >
-                <form method="post" action="inserir.php" enctype="multipart/form-data">
+                <form method="post" action='alterar.php' enctype="multipart/form-data">
+               
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                    <input type="hidden" name="id" value="<?= $id ?>">
                             
     
                         <div id="div_id_username" class="form-group required">

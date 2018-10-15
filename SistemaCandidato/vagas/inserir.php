@@ -22,6 +22,7 @@ $query = "insert into vagas values (default,'$datainicio','$datafinal','$nome','
 
 mysqli_query($conexao, $query);
 
-header('Location: form_inserir.php');
+ echo("<script type='text/javascript'> alert('Segue suas vagas cadastradas !!!'
+     ); location.href='listar.php';</script>");
 
 

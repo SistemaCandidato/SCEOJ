@@ -127,9 +127,9 @@ endif;
                             </div>
                         </div>
                         <div id="div_id_idade" class="form-group required">
-                             <label for="id_idade" class="control-label col-md-4  requiredField"> Rua<span class="asteriskField">*</span> </label>
+                             <label for="id_idade" class="control-label col-md-4  requiredField"> Endereço<span class="asteriskField">*</span> </label>
                              <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_password2" name="rua" placeholder="Rua" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_password2" name="endereco" placeholder="Rua" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
                         <div id="div_id_rua" class="form-group required"> 

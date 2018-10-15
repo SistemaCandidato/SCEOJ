@@ -11,110 +11,128 @@
         
         ?>
 
-<html>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <br><br>
-        <div class="conteiner">
-        
-        <div class="row col-sm-6 offset-3" >
-        
-            <form action="alterar.php" method="post">
-                <input type="hidden" name="id" value="<?= $id ?>">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-  <div class="form-row">
-      <div class="form-group  col-md-6" >
-    <label for="inputUsername">Login</label>
-    <input type="text" required class="form-control" id="inputUsername" placeholder="Login" name="username" value="<?= $linha['username'] ?>">
-  </div>
-         <div class="form-group  col-md-6" >
-    <label for="inputPassword">Senha</label>
-    <input type="password" required class="form-control" id="inputUsername" placeholder="Senha" name="password" value="<?= $linha['password'] ?>">
-  </div>
+
+
+<div class="container">    
             
-    <div class="form-group col-md-6">
-      <label for="inputNome">Nome fantasia</label>
-      <input type="text" required class="form-control" id="inputNome" placeholder="Nome Fantasia" name="nomefantasia" value="<?= $linha['nomefantasia'] ?>">
-    </div>
-  
-      
-    <div class="form-group col-md-6">
-      <label for="inputNome">Razão Social</label>
-      <input type="text" required class="form-control" id="inputNome" placeholder="Nome" name="razao" value="<?= $linha['razao'] ?>">
-    </div>
-  
-      
-
-  </div>
-  <div class="form-group " >
-    <label for="inputEndereco">Rua</label>
-    <input type="text" required class="form-control" id="inputEndereco" placeholder="Sua rua" name="endereco" value="<?= $linha['endereco'] ?>">
-  </div>
-  <div class="form-group ">
-    <label for="inputBairro">Bairro</label>
-    <input type="text" required class="form-control" id="inputBairro" placeholder="Seu bairro" name="bairro" value="<?= $linha['bairro'] ?>">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputNumero">Número</label>
-      <input type="text" maxlength="5" required class="form-control" id="inputNumero" placeholder="Número da casa" name="numero" value="<?= $linha['numero'] ?>">
-    </div>
- 
-    <div class="form-group col-md-6">
-      <label for="inputComplemento">Complemento</label>
-      <input type="text"  class="form-control" id="inputComplemento" placeholder="Complemento" name="complemento" value="<?= $linha['complemento'] ?>">
-    </div>
-      
-       <div class="form-group col-md-6">
-      <label for="inputCidade">Cidade</label>
-      <input type="text" required class="form-control" id="inputCidade" placeholder="Cidade" name="cidade" value="<?= $linha['cidade'] ?>">
-    </div>
-  
-    <div class="form-group col-md-4">
-      <label for="inputState">Estado</label>
-      <input  type="text" maxlength="2" required class="form-control"  id="inputEstado" placeholder="Estado" name="estado" value="<?= $linha['estado'] ?>" >
-    </div>
-      <div class="form-group col-md-4">
-      <label for="inputCnpj">CNPJ</label>
-      <input  type="text" maxlength="2" required class="form-control"  id="inputEstado" placeholder="CNPJ" name="cnpj" value="<?= $linha['cnpj'] ?>" >
-    </div>
-            <div class="form-group col-md-4">
-      <label for="inputEmail">E-mail</label>
-      <input  type="email" required class="form-control"  id="inputEstado" placeholder="E-mail" name="email" value="<?= $linha['email'] ?>" >
-    </div>
-    
-    
-      
-      <div class="form-group col-sm-6 ">
-    <label for="inputTelefone">Telefone</label>
-    <input type="text" required class="form-control" id="inputTelefone" placeholder="Telefone" name="telefone" value="<?= $linha['telefone'] ?>">
-  </div> 
- 
-      
-      
-      
-  </div>
-     
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
                
-               
-               
-  <div class="form-group">
-    <input type="submit" class="btn btn-success col-sm-4 offset-8" value="Cadastrar!">
+            </div>  
+            <div class="panel-body" >
+                <form method="post" action="alterar.php"/>
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                    <input type="hidden" name="id" value="<?= $id ?>">
+                            
 
+                  
+                    
+                        <div id="div_id_username" class="form-group required">
+                            <label for="id_username" class="control-label col-md-4  requiredField"> Username<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30" name="username" placeholder="Escolha seu username" value="<?= $linha['username']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_password" class="form-group required">
+                            <label for="id_password" class="control-label col-md-4  requiredField"> Password<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_Password" name="password" placeholder="Seu password" value="<?= $linha['password']?>" style="margin-bottom: 10px" type="password" />
+                            </div>     
+                        </div>
+                    <div id="div_id_password" class="form-group required">
+                            <label for="id_nomefantasia" class="control-label col-md-4  requiredField"> Nome Fantasia<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_nomeFantasia" name="nomefantasia" placeholder="Nome fantasia" value="<?= $linha['nomefantasia']?>" style="margin-bottom: 10px" type="text" />
+                            </div>     
+                    
+                        <div id="div_id_nome" class="form-group required">
+                            <label for="id_password1" class="control-label col-md-4  requiredField">Razão Social<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_nome" name="razao" placeholder="Razão Social" value="<?= $linha['razao']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_idade" class="form-group required">
+                             <label for="id_idade" class="control-label col-md-4  requiredField"> Endereço<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_password2" name="endereco" placeholder="Rua" value="<?= $linha['endereco']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                        <div id="div_id_rua" class="form-group required"> 
+                            <label for="id_rua" class="control-label col-md-4  requiredField"> Bairro<span class="asteriskField">*</span> </label> 
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_name" name="bairro" placeholder="Bairro"  value="<?= $linha['bairro']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="div_id_bairro" class="form-group required"> 
+                            <label for="id_bairro" class="control-label col-md-4  requiredField"> Número<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                 <input class="input-md textinput textInput form-control" id="id_bairro" name="numero" placeholder="Número" value="<?= $linha['numero']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div> 
+                        <div id="div_id_numero" class="form-group required">
+                            <label for="id_numero" class="control-label col-md-4  requiredField"> CEP<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                 <input class="input-md textinput textInput form-control" id="id_catagory" name="cep" placeholder="CEP" value="<?= $linha['cep']?>" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div> 
+                        <div id="div_id_number" class="form-group required">
+                             <label for="id_number" class="control-label col-md-4  requiredField"> Complemento<span class="asteriskField">*</span> </label>
+                             <div class="controls col-md-8 ">
+                                 <input class="input-md textinput textInput form-control" id="id_number" name="complemento" placeholder="Complemento" value="<?= $linha['complemento']?>" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div> 
+                        <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> Cidade<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_location" name="cidade" placeholder="Cidade" value="<?= $linha['cidade']?>" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div>
+                         <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> Estado<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" maxlength="2" id="id_location" name="estado" placeholder="Estado" value="<?= $linha['estado']?>"  style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div>
+                         <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> CNPJ<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_location" name="cnpj" placeholder="CNPJ" value="<?= $linha['cnpj']?>" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div>
+                            
+                             <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_location" name="email" placeholder="E-mail" value="<?= $linha['email']?>" style="margin-bottom: 10px" type="email" />
+                            </div> 
+                        </div>
+               
+                         <div id="div_id_location" class="form-group required">
+                            <label for="id_location" class="control-label col-md-4  requiredField"> Telefone<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md textinput textInput form-control" id="id_location" name="telefone" placeholder="Telefone" value="<?= $linha['telefone']?>" style="margin-bottom: 10px" type="text" />
+                            </div> 
+                        </div>
+                      
+   
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+            
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-
-
-                  </div>
-
-
-           
-     
-      
-    </body>
-</html>
-
+</div>
+                          

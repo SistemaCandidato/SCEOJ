@@ -6,7 +6,7 @@ include '../sql/conectar.php';
 
 $id = $_GET['id'];
 
-$sql = "delete from areas where id= $id";
+$sql = "delete from vagas where id= $id";
 
 
 mysqli_query($conexao, $sql);

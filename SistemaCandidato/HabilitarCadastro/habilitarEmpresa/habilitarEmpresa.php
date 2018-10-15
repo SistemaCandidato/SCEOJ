@@ -2,14 +2,9 @@
 
 
 ini_set("display_errors", true);
-include '../../sql/conectar.php';
-include '../../login/autenticacao.php';
-   
-       autenticar();
-       sessaoExpirada();
-       
-       include '../../cabecalho.php';
 
+       
+include '../../sql/conectar.php';
 include '../../cabecalho.php';
 
 

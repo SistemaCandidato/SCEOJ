@@ -26,7 +26,7 @@
                 include ($dir . 'navBar/navBarAdministrador.php');
             }
             
-            echo 'Bem vindo ' . exibirUsername();
+            
         } else {
             include($dir . 'navBar/navBarOFF.php');
         
