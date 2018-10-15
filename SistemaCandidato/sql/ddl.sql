@@ -2,7 +2,9 @@
 -- Sun Jun  3 16:46:21 2018
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
-SELECT * FROM entrevistas INNER JOIN vagas_has_candidatos ON entrevistas.vagas_has_candidatos_id = vagas_has_candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas ON vagas.id_empresa = empresas.id AND empresas.id = 1;
+
+
+
 
 
 
