@@ -35,11 +35,11 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $linha['descricao'] ?></td>
             <td><?= $linha['salario'] ?></td>
             <td><?= $linha['obs'] ?></td>
-            
+           
             
    
     
-                 <td><a href="marcarentrevista.php?<?= $linha['id'] ?>">
+                 <td><a href="marcarentrevista.php?id=<?= $linha['id']?>">
                     <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>   
            
                    

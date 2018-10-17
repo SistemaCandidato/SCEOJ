@@ -23,11 +23,6 @@ $resultado = mysqli_query($conexao, $sql);
       <th>Senha</th>
       <th>Razão Social</th>
       <th>Endereço</th>
-      <th>Bairro</th>
-      <th>Número</th>
-      <th>Complemento</th>
-      <th>Cidade</th>
-      <th>Estado</th>
       <th>CNPJ</th>
       <th>Telefone</th>
       <th>Excluir</th>
@@ -44,11 +39,6 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $linha['password'] ?></td>
             <td><?= $linha['razao'] ?></td>
             <td><?= $linha['endereco'] ?></td>
-            <td><?= $linha['bairro'] ?></td>
-            <td><?= $linha['numero'] ?></td>
-            <td><?= $linha['complemento'] ?></td>
-            <td><?= $linha['cidade'] ?></td>
-            <td><?= $linha['estado'] ?></td>
             <td><?= $linha['cnpj'] ?></td>
             <td><?= $linha['telefone'] ?></td>
             
