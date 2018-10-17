@@ -10,7 +10,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $nomefantasia = $_POST['nomefantasia'];
 $razao= $_POST['razao'];
-$rua = $_POST['rua'];
+$endereco = $_POST['endereco'];
 $bairro = $_POST['bairro'];
 $numero = $_POST['numero'];
 $cep = $_POST['cep'];
@@ -24,7 +24,7 @@ $telefone = $_POST['telefone'];
 
 
 
-$query = "insert into empresas values (default,'$username','$password','$nomefantasia','$razao','$rua','$bairro','$numero','$cep','$complemento','$cidade','$estado','$cnpj','$email','$telefone',default,NOW())";
+$query = "insert into empresas values (default,'$username','$password','$nomefantasia','$razao','$endereco','$bairro','$numero','$cep','$complemento','$cidade','$estado','$cnpj','$email','$telefone',default,NOW())";
 
 mysqli_query($conexao, $query);
 
@@ -33,7 +33,7 @@ $message = "
     <p><b>Username: $username</b></p>
     <p><b>Nome: $nomefantasia</b></p>
     <p><b>Idade: $razao</b></p>
-    <p><b>Rua: $rua</b></p>
+    <p><b>Rua: $endereco</b></p>
     <p><b>Bairro: $bairro</b></p>
     <p><b>Numero: $numero</b></p>
     <p><b>Complemento: $complemento</b></p>
@@ -129,7 +129,7 @@ endif;
                         <div id="div_id_idade" class="form-group required">
                              <label for="id_idade" class="control-label col-md-4  requiredField"> Endereço<span class="asteriskField">*</span> </label>
                              <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_password2" name="endereco" placeholder="Rua" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_password2" name="endereco" placeholder="Endereço" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
                         <div id="div_id_rua" class="form-group required"> 
@@ -204,6 +204,7 @@ endif;
         </div>
     </div>
 </div>
+
                           
                    
 

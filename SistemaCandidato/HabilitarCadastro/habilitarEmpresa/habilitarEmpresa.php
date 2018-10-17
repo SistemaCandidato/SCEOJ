@@ -12,6 +12,7 @@ $sql = "select * from empresas where Comp = 0";
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
+
 <br><br><br><br><br><br><br><br><br><br>
 <script type="text/javascript" src="../Java/alertaExclusao.js"></script>;
 <div class="container">
@@ -37,8 +38,8 @@ $resultado = mysqli_query($conexao, $sql);
             <td><a href="excluir.php?id=<?= $linha['id']?>">
                     <img src="../../imagens/excluir.png"  width="50"/></a></td>
               
-                    <td align="center"><a href="confirmar.php?id=<?= $linha['id']?>">
-                      <img src="../../imagens/confirmar.png"  width="50"/></a></td>
+                    <td><a href="confirmar.php?id=<?= $linha['id']?>">
+                            <img src="../../imagens/alterar.jpg"  width="50"/></a></td>
                 
               
         </tr>

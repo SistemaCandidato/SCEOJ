@@ -1,6 +1,5 @@
 <?php
     require_once '../cabecalho.php';
-
     include '../sql/conectar.php';
     include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
 
