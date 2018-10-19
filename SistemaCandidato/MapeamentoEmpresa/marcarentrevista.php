@@ -2,7 +2,7 @@
         include '../sql/conectar.php';
         include '../cabecalho.php';
      $id = $_GET['id'];   
-   
+   echo $id;
      
 ?>
 
@@ -17,7 +17,8 @@
     <p class="offset-5">Use palavras-chaves para a busca de um candidato </p>
   <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container">
-             <form class="navbar-form navbar-left offset-2 col-8" method="get" action="http://localhost/SistemaCandidato/MapeamentoEmpresa/mapeamento.php">
+          <form class="navbar-form navbar-left offset-2 col-8" method="get" action="mapeamento.php">
+                <input type="hidden" name="id" value="<?= $id ?>">
         <div class="input-group">
           <input type="text" class="form-control" name="q" placeholder="Pesquisar mapeamento">          
         </div>
