@@ -23,8 +23,6 @@ $resultado = mysqli_query($conexao, $sql);
         <th>Descrição</th>
         <th>Data Inicial</th>
         <th>Data Final</th>
-        <th>Quantidade de Semestres</th>
-        <th>Quantidade de Semestres Finalizados</th>
         <th>Setor</th>
         <th>Função</th>
         <th>Tarefas</th>
@@ -35,12 +33,10 @@ $resultado = mysqli_query($conexao, $sql);
     while ($linha = mysqli_fetch_array($resultado)) {
         ?>
         <tr>
-            <td><?= $linha['username']?></td> 
+            <td><?= $linha['nome']?></td> 
             <td><?= $linha['descricao'] ?></td>
             <td><?= $linha['datainicial'] ?></td>
             <td><?= $linha['datafinal'] ?></td>
-            <td><?= $linha['quantidadesemestres'] ?></td>
-            <td><?= $linha['quantidadesemestresfinalizados'] ?></td>
             <td><?= $linha['setor']?></td>
             <td><?= $linha['funcao']?></td> 
             <td><?= $linha['tarefas']?></td> 

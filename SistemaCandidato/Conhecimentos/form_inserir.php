@@ -62,6 +62,9 @@ and open the template in the editor.
                  
                             </div>
                         </div> 
+      <a class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Conhecimentos/listar.php">Ver Conhecimentos</a>
+      </a>     
       </div>
        </form>
           

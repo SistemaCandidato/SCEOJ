@@ -63,7 +63,10 @@ and open the template in the editor.
                                 <input type="submit" name="Signup" value="Cadastrar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
                  
                             </div>
-                        </div>    
+                        </div>
+    <a class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Cursos/listar.php">Ver Cursos</a>
+    </a>        
     </div> 
 
                 </form>
