@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Bem vindo</title>
     </head>
     <body>
         <!DOCTYPE html>
@@ -76,7 +76,7 @@ and open the template in the editor.
     </nav>
       
   </body>
-    <header class="masthead" style="background-image: url('./img/about-bg.jpg')">
+    <header class="masthead" style="background-image: url('./img/capa.png')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
