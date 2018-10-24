@@ -65,7 +65,7 @@ die();
     <input type="text" maxlength="1" required class="form-control" id="inputStatus" placeholder="Status da entrevista" name="status">
   </div>
 
-    <div class="form-group col-md-3">
+    <div class="form-group col-md-6">
       <label for="inputobservacao">Observação</label>
       <input type="text" required class="form-control" id="inputobservacao" placeholder="Observação" name="obs">
     </div>
@@ -78,7 +78,9 @@ die();
         </div>                        
                
   <div class="form-group">
-    <input type="submit" class="btn btn-success col-sm-2 offset-5" value="Cadastrar Entrevista!">
+      <div class="aab controls col-md-4 "></div>
+      <div class="controls col-md-8 "></div>
+    <input type="submit" class="btn btn-primary btn btn-info" value="Cadastrar Entrevista!">
 
     </div>
   </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
   <head>
 
@@ -54,7 +54,7 @@
     </nav>
 
 
-  <header class="masthead" style="background-image: url('img/about-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/capa.png')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
