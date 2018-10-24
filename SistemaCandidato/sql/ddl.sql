@@ -3,17 +3,12 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-CREATE DATABASE Teste CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-select * from conhecimentos;
-
-
+SELECT * FROM entrevistas INNER JOIN vagas_has_candidatos ON entrevistas.vagas_has_candidatos_id = vagas_has_candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas ON vagas.id_empresa = empresas.id AND empresas.id = 1;
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-
-
+drop table vagas_has_candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -26,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-
+select * from empresas;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -52,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   )
 ENGINE = InnoDB;
 
-
+drop table candidatos;
+select * from candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `id` INT NOT NULL AUTO_INCREMENT,
 `username` VARCHAR(20) NOT NULL,
@@ -83,7 +79,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas`
 -- -----------------------------------------------------
-
+select * from vagas;
 CREATE TABLE IF NOT EXISTS `Teste`.`vagas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `datainicio` DATE NOT NULL,
@@ -126,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
   `datafinal` DATE NULL,
   `quantidadesemestres` INT NOT NULL,
   `quantidadesemestresfinalizados` INT NOT NULL,
-  `status` CHAR(1) NOT NULL,
+  `status` CHAR(50) NOT NULL,
   `candidatos_id` INT NOT NULL,
   PRIMARY KEY (`id`, `candidatos_id`),
   INDEX `nome` (`nome` ASC),
@@ -138,11 +134,12 @@ CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+select * from vagas;
+insert into vagas values(default,2018-10-1,2018-10-11,'VagaTeste','dsadsjidsa',1500,'integral','fasjfsaj',300,1500,1);
 -- -----------------------------------------------------
 -- Table `mydb`.`conhecimentos`
 -- -----------------------------------------------------
-
+select * from conhecimentos;
 CREATE TABLE IF NOT EXISTS `Teste`.`conhecimentos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
@@ -150,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`conhecimentos` (
   `datainicial` DATE NOT NULL,
   `datafinal` DATE NULL,
   `local` VARCHAR(100) NOT NULL,
-  `status` CHAR(1) NOT NULL,
+  `status` CHAR(50) NOT NULL,
   `candidatos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `nome` (`nome` ASC),
@@ -166,17 +163,18 @@ ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`trabalhos`
-
+-- -----------------------------------------------------
+select * from trabalhos;
 CREATE TABLE IF NOT EXISTS `Teste`.`trabalhos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `descricao` VARCHAR(255) NOT NULL,
-  `dateinicial` DATE NOT NULL,
+  `datainicial` DATE NOT NULL,
   `datafinal` DATE NULL,
   `setor` VARCHAR(45) NOT NULL,
   `funcao` VARCHAR(100) NOT NULL,
   `tarefas` VARCHAR(255) NOT NULL,
-  `status` CHAR(1) NOT NULL,
+  `status` CHAR(50) NOT NULL,
   `candidatos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `nome` (`nome` ASC),
@@ -191,11 +189,11 @@ CREATE TABLE IF NOT EXISTS `Teste`.`trabalhos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+SELECT * FROM candidatos;
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas_has_candidatos`
 -- -----------------------------------------------------
-
+select * from vagas_has_candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`vagas_has_candidatos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `vagas_id` INT NOT NULL,
@@ -219,7 +217,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`entrevistas`
 -- -----------------------------------------------------
-
+select * from entrevistas;
 CREATE TABLE IF NOT EXISTS `Teste`.`entrevistas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
@@ -241,7 +239,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`areas`
 -- -----------------------------------------------------
-
+select * from areas;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -263,7 +261,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`areas_has_vagas`
 -- -----------------------------------------------------
 
-
+select * from areas_has_vagas;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_vagas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `areas_id` INT NOT NULL,
@@ -287,7 +285,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`areas_has_candidatos`
 -- -----------------------------------------------------
-
+select * from areas_has_candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
   `id` INT NOT NULL,
   `areas_id` INT NOT NULL,
@@ -308,3 +306,53 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
 ENGINE = InnoDB;
 
 
+select * from vagas_has_candidatos;
+
+
+update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
+update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
+
+insert into empresas values (default,'ricardo.223','rica223','Computacao','Trier Sistemas','Rua Julio Cesar Marcolino','Centro','73','754848','501','Tubarao','SC','345161','ricardosilva@gmail.com','984136487',default);
+
+insert into candidatos values (default,'ricardo.s4','rica24','Ricardo',17,'Rua Julio Cesar Marcolino','Centro','73','501','Tubarao','SC','ricardosilva@gmail.com','984136487','236851','437257669-02',default);
+
+SELECT candidatos.nome, cursos.nome FROM candidatos
+JOIN cursos 
+WHERE candidatos.id = cursos.candidatos_id;
+
+SELECT candidatos.nome, conhecimentos.nome FROM candidatos
+JOIN conhecimentos 
+WHERE candidatos.id = conhecimentos.candidatos_id;
+
+SELECT candidatos.nome, trabalhos.nome FROM candidatos
+JOIN trabalhos 
+WHERE candidatos.id = trabalhos.candidatos_id;
+
+select vagas.nome from vagas;
+select * from candidato where id ='1';
+insert into administrador values (default,'administrador','$123','$Vinicius');
+
+delete from conhecimentos;
+delete from cursos;
+delete from trabalhos;
+
+drop table conhecimentos;
+drop table cursos;
+drop table trabalhos;
+
+insert into conhecimentos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'IFSC', 'Andamento','',);
+
+insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', '3', '2', 'Andamento', '',);
+
+insert into trabalhos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'Computacao', 'Programador', 'Implementacao de Java', 'Andamento', '',);
+
+insert into candidatos values (default,'octavio.n09','tata','Octavio',19,'Rua Julio Francisco Regis','Vila Moema','43','401','Tubarao','SC','octavionaspolinineto@gmail.com','996178590','454663','065717565-01',default)
+
+insert into administrador values (default,'admin','admin1','123');
+
+
+SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON vagas_has_candidatos.candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I';
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

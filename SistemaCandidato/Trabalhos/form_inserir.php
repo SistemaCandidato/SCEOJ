@@ -24,7 +24,7 @@ and open the template in the editor.
         <div class="form-row">
       <div class="form-group  col-md-6" >
     <label for="inputUsername">Nome</label>
-    <input type="text" required class="form-control" id="inputUsername" placeholder="Nome" name="username">
+    <input type="text" required class="form-control" id="inputUsername" placeholder="Nome" name="nome">
   </div>
          <div class="form-group  col-md-6" >
     <label for="inputDescrição">Descrição</label>
@@ -39,16 +39,6 @@ and open the template in the editor.
     <div class="form-group col-md-6">
       <label for="inputDataFinal">Data Final</label>
       <input type="date" required class="form-control" id="inputDataFinal" placeholder="Data Final" name="datafinal">
-    </div>
-            
-    <div class="form-group col-md-6">
-      <label for="inputQuantidadedeSemestres">Quantidade de Semestres</label>
-      <input type="number" required class="form-control" id="inputQuantidadedeSemestres" placeholder="Quantidade de Semestres" name="quantidadesemestres">
-    </div>  
-    
-    <div class="form-group col-md-6">
-      <label for="inputQuantidadedeSemestresFinalizados">Quantidade de Semestres Finalizados</label>
-      <input type="number" required class="form-control" id="inputQuantidadedeSemestresFinalizados" placeholder="Quantidade de Semestres Finalizados" name="quantidadesemestresfinalizados">
     </div> 
             
     <div class="form-group col-md-6">
@@ -79,7 +69,10 @@ and open the template in the editor.
                                 <input type="submit" name="Signup" value="Cadastrar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
                  
                             </div>
-                        </div> 
+                        </div>
+      <a class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/Trabalhos/listar.php">Ver Trabalhos</a>
+      </a>      
       </div>
        </form>          
     </div>         

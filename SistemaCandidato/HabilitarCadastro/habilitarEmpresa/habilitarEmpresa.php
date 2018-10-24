@@ -39,7 +39,7 @@ $resultado = mysqli_query($conexao, $sql);
                     <img src="../../imagens/excluir.png"  width="50"/></a></td>
               
                     <td><a href="confirmar.php?id=<?= $linha['id']?>">
-                            <img src="../../imagens/alterar.jpg"  width="50"/></a></td>
+                            <img src="../../imagens/confirmar.png"  width="50"/></a></td>
                 
               
         </tr>

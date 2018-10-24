@@ -29,11 +29,11 @@
         <div class="form-row">
       <div class="form-group  col-md-6" >
     <label for="inputNome">Nome</label>
-    <input type="text" required class="form-control" id="inputNome" placeholder="Login" name="username" value="<?= $linha['username'] ?>">
+    <input type="text" required class="form-control" id="inputNome" placeholder="Nome" name="nome" value="<?= $linha['nome'] ?>">
   </div>
          <div class="form-group  col-md-6" >
     <label for="inputDescrição">Descrição</label>
-    <input type="text" required class="form-control" id="inputDesrcição" placeholder="Senha" name="password" value="<?= $linha['password'] ?>">
+    <input type="text" required class="form-control" id="inputDesrcição" placeholder="Descrição" name="descricao" value="<?= $linha['descricao'] ?>">
   </div>
       
     <div class="form-group col-md-6">
