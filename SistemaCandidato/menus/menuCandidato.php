@@ -25,56 +25,55 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
-            <a href="post.html">
+            <a href="http://www.ifsc.edu.br/">
               <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
+                Estude no IFSC
               </h2>
               <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
+                O IFSC conta com 22 câmpus em Santa Catarina. Veja qual o mais próximo de você.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="http://www.ifsc.edu.br/">IFSC</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.sc.senai.br/siteinstitucional/buscacursos">
               <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                Busca de Cursos no SENAI
               </h2>
+              <h3 class="post-subtitle">
+                Escolha os tipos de cursos de sua preferência.
+              </h3>  
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="http://fiesc.com.br/">FIESC</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.infojobs.com.br/empregos-em-santa-catarina.aspx">
               <h2 class="post-title">
-                Science has not yet mastered prophecy
+                O site de empregos mais utilizado no Brasil
               </h2>
               <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
+                Cadastre o seu CV grátis e candidate-se às vagas das melhores empresas do Brasil.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://www.infojobs.com.br/">InfoJobs</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href=https://www.curriculum.com.br/candidatos">
               <h2 class="post-title">
-                Failure is not an option
+                O maior portal de empregos e candidatos do Brasil
               </h2>
               <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                Mais de 32 mil vagas e mais de 9,4 milhões de profissionais.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://blog.curriculum.com.br/">Curriculm</a></p>
           </div>
           <hr>
           <!-- Pager -->

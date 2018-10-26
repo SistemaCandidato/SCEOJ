@@ -25,56 +25,52 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.google.com.br/search?q=informa%C3%A7%C3%B5es+sobre+vagas+de+emprego&oq=informa%C3%A7%C3%B5es+sobre+vagas&aqs=chrome.3.69i57j0l5.13544j0j1&sourceid=chrome&ie=UTF-8&ibp=htl;jobs&sa=X&ved=2ahUKEwiewuuel6TeAhVHE5AKHbehCg8QiYsCKAB6BAgCEAM#fpstate=tldetail&htidocid=UB_P_Tdwy4YAAAAAAAAAAA%3D%3D&htivrt=jobs">
               <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
+                Vagas de Emprego
               </h2>
               <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
+                Existem oportunidades de emprego em qualquer lugar, para buscar sua cidade, é uma ótima sugestão.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://www.google.com/">Google</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.empregos.com.br/">
               <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                Tá procurando um bom emprego? navegue o seu estado e a sua cidade de origem, é possível de encontrar.
               </h2>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://www.empregos.com.br/">Empregos.com.br</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.infojobs.com.br/empregos-em-santa-catarina.aspx">
               <h2 class="post-title">
-                Science has not yet mastered prophecy
+                O site de empregos mais utilizado no Brasil
               </h2>
               <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
+                Cadastre o seu CV grátis e candidate-se às vagas das melhores empresas do Brasil.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://www.infojobs.com.br/">InfoJobs</a></p>
           </div>
           <hr>
           <div class="post-preview">
-            <a href="post.html">
+            <a href="https://www.curriculum.com.br/empresas">
               <h2 class="post-title">
-                Failure is not an option
+                O maior portal de empregos e candidatos do Brasil
               </h2>
               <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                Mais de 32 mil vagas e mais de 9,4 milhões de profissionais.
               </h3>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2018</p>
+            <p class="post-meta">Postado no
+              <a href="https://blog.curriculum.com.br/">Curriculm</a></p>
           </div>
           <hr>
           <!-- Pager -->
