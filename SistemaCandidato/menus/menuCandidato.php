@@ -25,61 +25,23 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
-            <a href="http://www.ifsc.edu.br/">
-              <h2 class="post-title">
-                Estude no IFSC
-              </h2>
-              <h3 class="post-subtitle">
-                O IFSC conta com 22 câmpus em Santa Catarina. Veja qual o mais próximo de você.
-              </h3>
+              <center><h2 class="post-title">
+                SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
+              </h2></center>
+              <center><h3 class="post-subtitle">
+                Octavio Naspolini Neto, Vinicius Nazario Gonçalves
+              </h3></center>
+              <center><h4 class="post-preview">
+                Projeto Integrador II
+              </h4></center>   
+              <center><h5 class="post-preview">
+                IFSC Câmpus Tubarão
+              </h5></center>   
             </a>
-            <p class="post-meta">Postado no
-              <a href="http://www.ifsc.edu.br/">IFSC</a></p>
+            <center><p class="post-meta">Desenvolvido no IFSC</a>
+              - 2018</p></center>
           </div>
           <hr>
-          <div class="post-preview">
-            <a href="https://www.sc.senai.br/siteinstitucional/buscacursos">
-              <h2 class="post-title">
-                Busca de Cursos no SENAI
-              </h2>
-              <h3 class="post-subtitle">
-                Escolha os tipos de cursos de sua preferência.
-              </h3>  
-            </a>
-            <p class="post-meta">Postado no
-              <a href="http://fiesc.com.br/">FIESC</a></p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="https://www.infojobs.com.br/empregos-em-santa-catarina.aspx">
-              <h2 class="post-title">
-                O site de empregos mais utilizado no Brasil
-              </h2>
-              <h3 class="post-subtitle">
-                Cadastre o seu CV grátis e candidate-se às vagas das melhores empresas do Brasil.
-              </h3>
-            </a>
-            <p class="post-meta">Postado no
-              <a href="https://www.infojobs.com.br/">InfoJobs</a></p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href=https://www.curriculum.com.br/candidatos">
-              <h2 class="post-title">
-                O maior portal de empregos e candidatos do Brasil
-              </h2>
-              <h3 class="post-subtitle">
-                Mais de 32 mil vagas e mais de 9,4 milhões de profissionais.
-              </h3>
-            </a>
-            <p class="post-meta">Postado no
-              <a href="https://blog.curriculum.com.br/">Curriculm</a></p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
         </div>
       </div>
     </div>

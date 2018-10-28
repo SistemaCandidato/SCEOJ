@@ -25,58 +25,23 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
-            <a href="https://www.google.com.br/search?q=informa%C3%A7%C3%B5es+sobre+vagas+de+emprego&oq=informa%C3%A7%C3%B5es+sobre+vagas&aqs=chrome.3.69i57j0l5.13544j0j1&sourceid=chrome&ie=UTF-8&ibp=htl;jobs&sa=X&ved=2ahUKEwiewuuel6TeAhVHE5AKHbehCg8QiYsCKAB6BAgCEAM#fpstate=tldetail&htidocid=UB_P_Tdwy4YAAAAAAAAAAA%3D%3D&htivrt=jobs">
-              <h2 class="post-title">
-                Vagas de Emprego
-              </h2>
-              <h3 class="post-subtitle">
-                Existem oportunidades de emprego em qualquer lugar, para buscar sua cidade, é uma ótima sugestão.
-              </h3>
+              <center><h2 class="post-title">
+                SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
+              </h2></center>
+              <center><h3 class="post-subtitle">
+                Octavio Naspolini Neto, Vinicius Nazario Gonçalves
+              </h3></center>
+              <center><h4 class="post-preview">
+                Projeto Integrador II
+              </h4></center>   
+              <center><h5 class="post-preview">
+                IFSC Câmpus Tubarão
+              </h5></center>   
             </a>
-            <p class="post-meta">Postado no
-              <a href="https://www.google.com/">Google</a></p>
+            <center><p class="post-meta">Desenvolvido no IFSC</a>
+              - 2018</p></center>
           </div>
           <hr>
-          <div class="post-preview">
-            <a href="https://www.empregos.com.br/">
-              <h2 class="post-title">
-                Tá procurando um bom emprego? navegue o seu estado e a sua cidade de origem, é possível de encontrar.
-              </h2>
-            </a>
-            <p class="post-meta">Postado no
-              <a href="https://www.empregos.com.br/">Empregos.com.br</a></p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="https://www.infojobs.com.br/empregos-em-santa-catarina.aspx">
-              <h2 class="post-title">
-                O site de empregos mais utilizado no Brasil
-              </h2>
-              <h3 class="post-subtitle">
-                Cadastre o seu CV grátis e candidate-se às vagas das melhores empresas do Brasil.
-              </h3>
-            </a>
-            <p class="post-meta">Postado no
-              <a href="https://www.infojobs.com.br/">InfoJobs</a></p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="https://www.curriculum.com.br/empresas">
-              <h2 class="post-title">
-                O maior portal de empregos e candidatos do Brasil
-              </h2>
-              <h3 class="post-subtitle">
-                Mais de 32 mil vagas e mais de 9,4 milhões de profissionais.
-              </h3>
-            </a>
-            <p class="post-meta">Postado no
-              <a href="https://blog.curriculum.com.br/">Curriculm</a></p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
         </div>
       </div>
     </div>
@@ -129,7 +94,7 @@
 
   </body>
 
-  <
+  
     
       
      
