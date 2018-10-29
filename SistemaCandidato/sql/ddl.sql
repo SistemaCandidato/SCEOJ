@@ -65,7 +65,6 @@ CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `telefone` VARCHAR(16) NOT NULL,
   `rg` VARCHAR(15) NOT NULL,
   `cpf` VARCHAR(15) NOT NULL,
-  `foto` VARCHAR(100) NOT NULL,
     Comp int default 0,
 datainclusao datetime not null,
    PRIMARY KEY (`id`),
