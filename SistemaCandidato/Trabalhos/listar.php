@@ -12,7 +12,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 ?>
 <br><br><br><br>
-<script type="text/javascript" src="../Java/alertaExclusao.js"></script>;
+<script type="text/javascript" src="../Java/alertaExclusao.js"></script>
 <div class="container">
   <p>Aqui está seu cadastro, pense bem antes de excluir seus dados</p>                                                                                      
   <div class="table-responsive">          
