@@ -21,13 +21,14 @@ $email = $_POST['email'];
 $telefone= $_POST['telefone'];
 $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
+$foto = $_POST['foto'];
 
 
    	 
 
 
 
-$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf',default,NOW())");
+$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf','$foto', default,NOW())");
  
 
 mysqli_query($conexao, $smtp);
@@ -48,6 +49,7 @@ $message = "
     <p><b>Telefone: $telefone</b></p>
     <p><b>RG: $rg</b></p>
     <p><b>CPF: $cpf</b></p>
+    <p><b>Imagem: $foto</b></p>    
 ";
 
 

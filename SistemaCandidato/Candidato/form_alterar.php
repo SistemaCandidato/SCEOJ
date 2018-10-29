@@ -121,6 +121,13 @@
                                 <input class="input-md textinput textInput form-control" id="id_location" name="cpf" placeholder="cpf" value="<?= $linha['cpf']?>"  style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
+                    
+                        <div id="div_id_location" class="form-group required">    
+                            <tr>
+                            <td>Imagem:</td>
+                            <td><input type="file" name="foto" size="50"></td>
+                            </tr>
+                        </div>
                         
                      
                         <div class="form-group"> 
