@@ -11,10 +11,30 @@ include '../cabecalho.php';
 
 $Areas_id = str_replace(" ", "%", $_GET['q']);
 
-$resultado  = ("select candidatos.id,candidatos.nome AS candidato,conhecimentos.nome FROM candidatos INNER JOIN conhecimentos WHERE candidatos.id = conhecimentos.candidatos_id AND conhecimentos.nome LIKE '%$Areas_id%'");
-$oi = mysqli_query($conexao, $resultado);
+$query = "SELECT     
+        candidatos.id,
+        candidatos.nome as candidatos ,
+        conhecimentos.nome AS conhecimentos, 
+        cursos.nome, 
+        trabalhos.nome 
 
-if($oi != NULL){
+FROM candidatos
+
+    LEFT JOIN  conhecimentos ON              candidatos.id =  conhecimentos.candidatos_id 
+And conhecimentos.nome LIKE '%$Areas_id%' 
+
+   LEFT JOIN cursos ON 
+candidatos.id = cursos.candidatos_id 
+And cursos.nome LIKE '%$Areas_id%'
+
+LEFT JOIN trabalhos ON 
+    candidatos.id = trabalhos.candidatos_id  
+And trabalhos.nome LIKE '%$Areas_id%'";
+
+echo '<br><br><br><br><br><br><br><br>';
+echo $query;
+
+$resultado = mysqli_query($conexao, $query);
 ?>
  <meta charset="UTF-8">
 <br><br><br><br><br><br><br><br>
@@ -34,12 +54,12 @@ if($oi != NULL){
       </tr>
     </thead>
 <?php
-    while ($linha = mysqli_fetch_array($oi)) {
+    while ($linha = mysqli_fetch_array($resultado)) {
    ?>
         <tr>
-       
-            <td><?= $linha['candidato']?></td> 
-            <td><?= $linha['nome'] ?></td>
+             <td><?= $linha['candidatos'] ?></td>
+            <td><?= $linha['conhecimentos']?></td> 
+           
            
                         
         </tr>
@@ -47,7 +67,7 @@ if($oi != NULL){
   </div>
         <?php 
     }
-    }
+
     ?>
 
 

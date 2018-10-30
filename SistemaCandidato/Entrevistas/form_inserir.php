@@ -1,11 +1,14 @@
 <?php
 
  include '../sql/conectar.php';   
-     
+ include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
 
 include '../cabecalho.php';
 
 
+  $email = $_GET['email'];
+  $razao = $_GET['razao'];
+  $nome = $_GET['nome'];
   $id = $_GET['id'];
 
 if(Count($_POST) > 0){
@@ -24,9 +27,42 @@ mysqli_query($conexao, $query);
 $queryUpdate = "update vagas_has_candidatos set status='A' where id =$id";
 
 mysqli_query($conexao, $queryUpdate);
+
+$message = "
+<h3>Olá $nome, olha que incrível, você conseguiu uma entrevista, parabéns. Abaixo segue as informações que você precisa><br/>
+    <p><b>Data: $data</b></p>
+    <p><b>Horario: $horario</b></p>
+    <p><b>Razão da empresa: $razao</b></p>
+";
+
+$mail = new PHPMailer;
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'sistemacandidatoempresa@gmail.com';
+$mail->Password = 'candidato123';
+$mail->SMTPSecure = 'tls';
+$mail->Port = 587;
+$mail->IsHTML(true);
+$mail->From = 'sistemacandidatoempresa@gmail.com';
+$mail->FromName = 'Sistema do candidato';
+
+$mail->addAddress($email,$nome);
+$mail->Subject = 'Sistema de candidato';
+ 
+$mail->Body = $message;
+ 
+if($mail->Send()):
+    echo 'Enviado com sucesso !';
+else:
+    echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
+endif;
+
+
+
     
 header('Location: listarPossiveis.php');
-die();
+
 }
      
      
