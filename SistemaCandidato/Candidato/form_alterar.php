@@ -12,7 +12,7 @@
 
         ?>
 
-<<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -27,7 +27,7 @@
                 <div class="panel-title">Sign Up</div>
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
             </div>  
-            <div class="panel-body" >
+            <div class="panel-body">
                 <form method="post" action='alterar.php' enctype="multipart/form-data">
                
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
@@ -120,6 +120,13 @@
                             <div class="controls col-md-8 ">
                                 <input class="input-md textinput textInput form-control" id="id_location" name="cpf" placeholder="cpf" value="<?= $linha['cpf']?>"  style="margin-bottom: 10px" type="text" />
                             </div> 
+                        </div>
+                    
+                        <div id="div_id_location" class="form-group required">    
+                            <tr>
+                            <td>Imagem:</td>
+                            <td><input type="file" name="foto" size="50"></td>
+                            </tr>
                         </div>
                         
                      

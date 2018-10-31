@@ -15,9 +15,19 @@ and open the template in the editor.
    </head>
    <body>
        <br><br>
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <div class="conteiner">
         
-            <div class="row col-sm-6 offset-3" >
+        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div style="float:right; font-size: 85%; position: relative; top:-10px"></div>
+            </div>  
+            <div class="panel-body" >
+                <form method="post" action="#" enctype="multipart/form-data">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
                 
         <form method="post" action="inserir.php">
            
