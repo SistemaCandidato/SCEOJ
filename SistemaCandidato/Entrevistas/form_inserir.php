@@ -24,6 +24,9 @@ $query = "insert into entrevistas values (default,'$data','$horario','$status','
 mysqli_query($conexao, $query);
 
 
+
+
+
 $queryUpdate = "update vagas_has_candidatos set status='A' where id =$id";
 
 mysqli_query($conexao, $queryUpdate);
@@ -33,6 +36,7 @@ $message = "
     <p><b>Data: $data</b></p>
     <p><b>Horario: $horario</b></p>
     <p><b>Razão da empresa: $razao</b></p>
+    <p>Clique no link ao lado para confirmar a entrevista: 'http://localhost/SistemaCandidato/Entrevistas/StatusEntrevista.php?id=$entrevista_id'<b>
 ";
 
 $mail = new PHPMailer;

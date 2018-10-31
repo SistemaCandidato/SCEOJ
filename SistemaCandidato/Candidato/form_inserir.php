@@ -23,16 +23,6 @@ $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
 
 
-   	 
-
-
-
-$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf', default,NOW())");
- 
-
-mysqli_query($conexao, $smtp);
-   
-
 $message = "
 <h3>Olá $nome,seu cadastro foi concluído</h3><br/>
     <p><b>Username: $username</b></p>
@@ -76,9 +66,27 @@ endif;
 
 
 
-   echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !!!'
+
+   	 
+
+
+
+$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf', default,NOW())");
+ 
+
+if(mysqli_query($conexao, $smtp)){
+       echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !'
             );</script>");
+} else {
+       echo("<script type='text/javascript'> alert('Cadastro não foi completo, tente de novo !'
+            );</script>");;
 }
+}
+   
+
+
+
+
 
 
 ?>
