@@ -34,7 +34,7 @@
                 Unidade Curricular: Projeto Integrador II
               </h4></center>   
               <center><h5 class="post-preview">
-                IFSC Câmpus Tubarão
+                Instituto: IFSC Câmpus Tubarão
               </h5></center>     
             </a>
             <center><p class="post-meta">Desenvolvido no IFSC</a>
@@ -78,7 +78,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+            <p class="copyright text-muted">Copyright &copy; PI 2018</p>
           </div>
         </div>
       </div>
