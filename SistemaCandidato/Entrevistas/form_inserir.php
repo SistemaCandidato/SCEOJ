@@ -23,6 +23,7 @@ $query = "insert into entrevistas values (default,'$data','$horario','$status','
 
 mysqli_query($conexao, $query);
 
+$entrevista_id = mysqli_insert_id($conexao);
 
 
 
@@ -65,7 +66,7 @@ endif;
 
 
     
-header('Location: listarPossiveis.php');
+header('Location: ListarEntrevistas.php');
 
 }
      

@@ -23,7 +23,52 @@ $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
 
 
-$message = "
+ $query = "SELECT username from candidatos where username = '$username'";
+ $teste = mysqli_query($conexao,$query);
+ $linha = mysqli_num_rows($teste);
+ 
+ 
+ $queryEmail = "select email from candidatos where email = '$email'";
+ $testeEmail = mysqli_query($conexao, $queryEmail);
+ $linhaEmail = mysqli_num_rows($testeEmail);
+ 
+ $queryCPF = "select cpf from  candidatos where cpf = '$cpf'";
+ $testeCpf = mysqli_query($conexao, $queryCPF);
+ $linhaCpf = mysqli_num_rows($testeCpf);
+ 
+ $queryRG = "select rg from candidatos where rg = '$rg'";
+ $testeRG = mysqli_query($conexao, $queryRG);
+ $linhaRg = mysqli_num_rows($testeRG);
+
+ 
+ if ($linha >= 1 ){
+       echo("<script type='text/javascript'> alert('Username já cadastrado !'
+            );</script>");
+
+}
+
+ if ($linhaEmail >=1){
+     echo("<script type='text/javascript'> alert('E-mail já cadastrado !'
+            );</script>");
+     
+ }
+ if ($linhaCpf >=1) {
+       echo("<script type='text/javascript'> alert('CPF já cadastrado !'
+            );</script>");
+ 
+ }            
+ if ($linhaRg >=1){
+     echo("<script type='text/javascript'> alert('RG já cadastrado !'
+            );</script>");
+ }else{
+
+ 
+
+$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf', default,NOW())");
+ 
+
+if(mysqli_query($conexao, $smtp)){
+    $message = "
 <h3>Olá $nome,seu cadastro foi concluído</h3><br/>
     <p><b>Username: $username</b></p>
     <p><b>Nome: $nome</b></p>
@@ -64,24 +109,12 @@ else:
     echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
 endif;
 
-
-
-
-   	 
-
-
-
-$smtp = ("insert into candidatos values (default,'$username','$password','$nome',$idade,'$rua','$bairro','$numero','$complemento','$cidade','$estado','$email','$telefone','$rg','$cpf', default,NOW())");
- 
-
-if(mysqli_query($conexao, $smtp)){
-       echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !'
+ echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !'
             );</script>");
-} else {
-       echo("<script type='text/javascript'> alert('Cadastro não foi completo, tente de novo !'
-            );</script>");;
 }
 }
+}
+
    
 
 

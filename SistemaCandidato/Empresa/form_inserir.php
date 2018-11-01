@@ -26,8 +26,8 @@ $telefone = $_POST['telefone'];
 
 $query = "insert into empresas values (default,'$username','$password','$nomefantasia','$razao','$endereco','$bairro','$numero','$cep','$complemento','$cidade','$estado','$cnpj','$email','$telefone',default,NOW())";
 
-mysqli_query($conexao, $query);
 
+if(mysqli_query($conexao, $query)){
 $message = "
 <h3>Olá $razao você se cadastrou no Stc</h3><br/>
     <p><b>Username: $username</b></p>
@@ -74,8 +74,10 @@ endif;
 
  echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !!!'
             );</script>");
-
-
+}else{
+ echo("<script type='text/javascript'> alert('Cadastro não deu certo !!!'
+            );</script>");
+}
 }
 
 ?>
