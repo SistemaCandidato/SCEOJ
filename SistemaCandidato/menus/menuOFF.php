@@ -30,23 +30,22 @@
    
    
 
-  <center><h1>Informações</h1></center>
-    <div class="container">
+  <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
               <center><h2 class="post-title">
-                SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
+                Projeto: SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
               </h2></center>
               <center><h3 class="post-subtitle">
-                Octavio Naspolini Neto, Vinicius Nazario Gonçalves
+                Equipe: Octavio Naspolini Neto, Vinicius Nazario Gonçalves
               </h3></center>
               <center><h4 class="post-preview">
-                Projeto Integrador II
+                Unidade Curricular: Projeto Integrador II
               </h4></center>   
               <center><h5 class="post-preview">
                 IFSC Câmpus Tubarão
-              </h5></center>   
+              </h5></center>    
             </a>
             <center><p class="post-meta">Desenvolvido no IFSC</a>
               - 2018</p></center>
