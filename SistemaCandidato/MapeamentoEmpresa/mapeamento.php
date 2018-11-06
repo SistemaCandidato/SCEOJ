@@ -2,8 +2,11 @@
 <?php
 include '../sql/conectar.php';
 include '../cabecalho.php';
- $id = $_GET['id'];
- 
+
+
+
+ $idvagas = $_GET['idvagas'];
+ echo $idvagas;
  
 
 
@@ -11,16 +14,17 @@ include '../cabecalho.php';
 
 $Areas_id = str_replace(" ", "%", $_GET['q']);
 
-$query = "SELECT     
+$resultado  = "SELECT DISTINCT   
         candidatos.id,
-        candidatos.nome as candidatos ,
+        candidatos.nome AS candidato ,
         conhecimentos.nome AS conhecimentos, 
-        cursos.nome, 
-        trabalhos.nome 
+        cursos.nome AS cursos, 
+        trabalhos.nome AS trabalhos
 
 FROM candidatos
 
-    LEFT JOIN  conhecimentos ON              candidatos.id =  conhecimentos.candidatos_id 
+
+    LEFT JOIN  conhecimentos ON candidatos.id =  conhecimentos.candidatos_id 
 And conhecimentos.nome LIKE '%$Areas_id%' 
 
    LEFT JOIN cursos ON 
@@ -29,13 +33,14 @@ And cursos.nome LIKE '%$Areas_id%'
 
 LEFT JOIN trabalhos ON 
     candidatos.id = trabalhos.candidatos_id  
-And trabalhos.nome LIKE '%$Areas_id%'";
+And trabalhos.nome LIKE '%$Areas_id%'
 
-echo '<br><br><br><br><br><br><br><br>';
-echo $query;
+WHERE conhecimentos.nome IS NOT NULL OR cursos.nome IS NOT NULL OR trabalhos.nome IS NOT NULL";
 
-$resultado = mysqli_query($conexao, $query);
+$result = mysqli_query($conexao, $resultado);
+
 ?>
+
  <meta charset="UTF-8">
 <br><br><br><br><br><br><br><br>
 <div class="container">
@@ -54,27 +59,26 @@ $resultado = mysqli_query($conexao, $query);
       </tr>
     </thead>
 <?php
-    while ($linha = mysqli_fetch_array($resultado)) {
+    while ($linha = mysqli_fetch_array($result)) {
    ?>
         <tr>
-             <td><?= $linha['candidatos'] ?></td>
-            <td><?= $linha['conhecimentos']?></td> 
+       
+            <td><?= $linha['candidato']?></td> 
+            <td><?= $linha['conhecimentos'] ?></td>
+            <td><?= $linha['cursos'] ?></td>
+            <td><?= $linha['trabalhos'] ?></td>
+            
            
-           
+            <td><a href="inserir.php?id=<?=$linha['id']?>&idvagas=<?=$linha['idvagas']?>">
+                    <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
                         
         </tr>
         </table>
   </div>
         <?php 
     }
-
+   
     ?>
 
 
   
-
-    
-
-
-
-    

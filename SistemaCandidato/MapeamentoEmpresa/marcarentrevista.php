@@ -1,8 +1,8 @@
 <?php
         include '../sql/conectar.php';
         include '../cabecalho.php';
-     $id = $_GET['id'];   
-   echo $id;
+     $idvagas = $_GET['id'];   
+   echo  $idvagas;
      
 ?>
 
@@ -18,7 +18,7 @@
   <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
       <div class="container">
           <form class="navbar-form navbar-left offset-2 col-8" method="get" action="mapeamento.php">
-                <input type="hidden" name="id" value="<?= $id ?>">
+              <input type="hidden" name="idvagas" value="<?=$idvagas?>">
         <div class="input-group">
           <input type="text" class="form-control" name="q" placeholder="Pesquisar mapeamento">          
         </div>

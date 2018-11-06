@@ -5,7 +5,7 @@ include '../sql/conectar.php';
 
 
 
-$sql  = "SELECT * FROM vagas where id_empresa = $_SESSION[id]";
+$sql  = "SELECT id as idvagas,nome,descricao,salario,obs FROM vagas where id_empresa = $_SESSION[id]";
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
@@ -39,7 +39,7 @@ $resultado = mysqli_query($conexao, $sql);
             
    
     
-                 <td><a href="marcarentrevista.php?id=<?= $linha['id']?>">
+                 <td><a href="marcarentrevista.php?id=<?= $linha['idvagas']?>">
                     <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>   
            
                    
