@@ -14,12 +14,13 @@ include '../cabecalho.php';
 if(Count($_POST) > 0){
 
   $data = $_POST['data'];
+  $datafinal = $_POST['datafinal'];
   $horario = $_POST['horario'];
   $status = $_POST['status'];
   $obs = $_POST['obs'];
 
 
-$query = "insert into entrevistas values (default,'$data','$horario','$status','$obs',$id)";
+$query = "insert into entrevistas values (default,'$data','$datafinal','$horario','$status','$obs',$id)";
 
 mysqli_query($conexao, $query);
 
@@ -97,6 +98,11 @@ header('Location: ListarEntrevistas.php');
     <label for="inputData">Data</label>
     <input type="date" required class="form-control" id="inputUsername" placeholder="Data" name="data">
   </div>
+     <div class="form-group  col-md-6" >
+    <label for="inputData">Data Final</label>
+    <input type="date" required class="form-control" id="inputUsername" placeholder="Data Final" name="datafinal">
+  </div> 
+      
          <div class="form-group  col-md-6" >
     <label for="inputHorario">Horario</label>
     <input type="time" required class="form-control" id="inputHorario" placeholder="horario" name="horario">

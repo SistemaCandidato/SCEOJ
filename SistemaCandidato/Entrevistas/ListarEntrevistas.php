@@ -3,7 +3,7 @@ include '../cabecalho.php';
 include '../sql/conectar.php';
 
 
-$sql = "SELECT *
+$sql = "SELECT entrevistas.id,entrevistas.data,entrevistas.datafinal,entrevistas.hora,entrevistas.status,vagas_has_candidatos.id AS VAGAS_Has
 FROM entrevistas
 INNER JOIN vagas_has_candidatos ON entrevistas.vagas_has_candidatos_id = vagas_has_candidatos.id
 INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id
@@ -31,12 +31,14 @@ $resultado = mysqli_query($conexao, $sql);
     while ($linha = mysqli_fetch_array($resultado)) {
         ?>
         <tr>
+            <?= $linha['VAGAS_Has']?>;
             <td><?= $linha['data']?></td> 
+            <td><?= $linha['datafinal']?></td>
             <td><?= $linha['hora'] ?></td>
             <td><?= $linha['status'] ?></td>
            
            
-           <td><a onclick="alertaExclusao(<?= $linha['id']?>)" href="javascript:func()">
+            <td><a href="excluir.php?id=<?= $linha['id']?>&VAGAS_Has=<?= $linha['VAGAS_Has']?>">
               <img src="../imagens/excluir.png" height="30" width="30"/></a></td>
               
               <td><a href="form_alterar.php?id=<?= $linha['id'] ?>">

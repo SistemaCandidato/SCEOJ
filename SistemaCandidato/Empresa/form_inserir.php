@@ -1,6 +1,5 @@
 <?php
-    require_once '../cabecalho.php';
-    
+    require_once '../cabecalho.php'; 
 include '../sql/conectar.php';
 include '../PHPMailer-6.0.5/src/PHPMailerAutoload.php';
 
@@ -22,8 +21,43 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 
 
+$query = "SELECT username from empresas where username = '$username'";
+ $teste = mysqli_query($conexao,$query);
+ $linha = mysqli_num_rows($teste);
+ 
+ 
+ $queryEmail = "select email from empresas where email = '$email'";
+ $testeEmail = mysqli_query($conexao, $queryEmail);
+ $linhaEmail = mysqli_num_rows($testeEmail);
+ 
+ $querycnpj = "select cnpj from empresas where cpf = '$cnpj'";
+ $testeCnpj = mysqli_query($conexao, $querycnpj);
+ $linhaCnpj = mysqli_num_rows($testeCnpj);
+ 
+ $queryrazao = "select razao from empresas where rg = '$razao'";
+ $testeRazao = mysqli_query($conexao, $queryrazao);
+ $linhaRazao = mysqli_num_rows($testeRazao);
+if ($linha >= 1 ){
+       echo("<script type='text/javascript'> alert('Username já cadastrado !'
+            );</script>");
 
+}
 
+ if ($linhaEmail >=1){
+     echo("<script type='text/javascript'> alert('E-mail já cadastrado !'
+            );</script>");
+     
+ }
+ if ($linhaCnpj >=1) {
+       echo("<script type='text/javascript'> alert('CNPJ já cadastrado !'
+            );</script>");
+ 
+ }            
+ if ($linhaRazao >=1){
+     echo("<script type='text/javascript'> alert('Razão social já cadastrada já cadastrado !'
+            );</script>");
+ }else{
+ 
 $query = "insert into empresas values (default,'$username','$password','$nomefantasia','$razao','$endereco','$bairro','$numero','$cep','$complemento','$cidade','$estado','$cnpj','$email','$telefone',default,NOW())";
 
 
@@ -74,11 +108,11 @@ endif;
 
  echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !!!'
             );</script>");
-}else{
- echo("<script type='text/javascript'> alert('Cadastro não deu certo !!!'
-            );</script>");
+
 }
+ }
 }
+
 
 ?>
 

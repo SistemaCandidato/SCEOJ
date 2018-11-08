@@ -4,12 +4,9 @@ include '../sql/conectar.php';
 include '../cabecalho.php';
 
 
-
- $idvagas = $_GET['idvagas'];
- echo $idvagas;
+ $idVagas = $_GET['Idvagas'];
+ echo $idVagas;
  
-
-
  
 
 $Areas_id = str_replace(" ", "%", $_GET['q']);
@@ -39,6 +36,9 @@ WHERE conhecimentos.nome IS NOT NULL OR cursos.nome IS NOT NULL OR trabalhos.nom
 
 $result = mysqli_query($conexao, $resultado);
 
+
+
+
 ?>
 
  <meta charset="UTF-8">
@@ -60,25 +60,29 @@ $result = mysqli_query($conexao, $resultado);
     </thead>
 <?php
     while ($linha = mysqli_fetch_array($result)) {
+          
    ?>
         <tr>
-       
+           
             <td><?= $linha['candidato']?></td> 
             <td><?= $linha['conhecimentos'] ?></td>
             <td><?= $linha['cursos'] ?></td>
             <td><?= $linha['trabalhos'] ?></td>
-            
+          
            
-            <td><a href="inserir.php?id=<?=$linha['id']?>&idvagas=<?=$linha['idvagas']?>">
+            <td><a href="inserir.php?id=<?= $linha['id'] ?>&idVagas=<?= $idVagas ?>">
                     <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
                         
         </tr>
-        </table>
-  </div>
+     
+
         <?php 
     }
    
     ?>
+           </table>
+  </div>
+</div>
 
 
   
