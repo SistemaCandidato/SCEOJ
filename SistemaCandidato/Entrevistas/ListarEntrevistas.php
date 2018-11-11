@@ -21,9 +21,12 @@ $resultado = mysqli_query($conexao, $sql);
   <table class="table">
     <thead>
       <tr>
-        <th>Data</th>
-        <th>Horarío</th>
-        <th>Status</th>
+          <th>Situação</th>
+        <th>Data Inicial</th>
+        <th>Data final</th>
+        <th>Horario</th>
+        <th>Excluir</th>
+      
    
       </tr>
     </thead>
@@ -31,18 +34,18 @@ $resultado = mysqli_query($conexao, $sql);
     while ($linha = mysqli_fetch_array($resultado)) {
         ?>
         <tr>
-            <?= $linha['VAGAS_Has']?>;
+         
+            <td><?= $linha['status']?></td>
             <td><?= $linha['data']?></td> 
             <td><?= $linha['datafinal']?></td>
             <td><?= $linha['hora'] ?></td>
-            <td><?= $linha['status'] ?></td>
+        
            
            
             <td><a href="excluir.php?id=<?= $linha['id']?>&VAGAS_Has=<?= $linha['VAGAS_Has']?>">
               <img src="../imagens/excluir.png" height="30" width="30"/></a></td>
               
-              <td><a href="form_alterar.php?id=<?= $linha['id'] ?>">
-                    <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
+          
 
         </tr>
         <?php
