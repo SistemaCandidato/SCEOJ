@@ -8,7 +8,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-drop table vagas_has_candidatos;
+select * from administrador;
 CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   INDEX `id` (`id` ASC),
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
+delete from administrador;
+drop table administrador;
 
 select * from empresas;
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
@@ -46,8 +48,10 @@ CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   UNIQUE INDEX `cnpj` (`cnpj` ASC)
   )
 ENGINE = InnoDB;
+delete from empresas;
+drop table empresas;
 
-drop table candidatos;
+
 select * from candidatos;
 CREATE TABLE IF NOT EXISTS `Teste`.`candidatos` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -74,7 +78,8 @@ datainclusao datetime not null,
   UNIQUE INDEX `cpf` (`cpf` ASC),
   UNIQUE INDEX `email` (`email` ASC))
 ENGINE = InnoDB;
-
+delete from candidatos;
+drop table candidatos;
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas`
 -- -----------------------------------------------------
@@ -107,6 +112,8 @@ CONSTRAINT `fk_areas_vagas`
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from vagas;
+drop table vagas;
 
 
 -- -----------------------------------------------------
@@ -133,8 +140,11 @@ CREATE TABLE IF NOT EXISTS `Teste`.`cursos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-select * from vagas;
-insert into vagas values(default,2018-10-1,2018-10-11,'VagaTeste','dsadsjidsa',1500,'integral','fasjfsaj',300,1500,1);
+delete from cursos;
+drop table cursos;
+
+
+
 -- -----------------------------------------------------
 -- Table `mydb`.`conhecimentos`
 -- -----------------------------------------------------
@@ -158,6 +168,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`conhecimentos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from conhecimentos;
+drop table conhecimentos;
 
 
 -- -----------------------------------------------------
@@ -188,7 +200,10 @@ CREATE TABLE IF NOT EXISTS `Teste`.`trabalhos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-SELECT * FROM candidatos;
+delete from trabalhos;
+drop table trabalhos;
+
+
 -- -----------------------------------------------------
 -- Table `mydb`.`vagas_has_candidatos`
 -- -----------------------------------------------------
@@ -212,6 +227,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`vagas_has_candidatos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from vagas_has_candidatos;
+drop table vagas_has_candidatos;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`entrevistas`
@@ -233,6 +250,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`entrevistas` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from entrevistas;
+drop table entrevistas;
 
 
 -- -----------------------------------------------------
@@ -254,6 +273,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from areas;
+drop table areas;
 
 
 -- -----------------------------------------------------
@@ -279,6 +300,8 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_vagas` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from areas_has_vagas;
+drop table areas_has_vagas;
 
 
 -- -----------------------------------------------------
@@ -303,17 +326,10 @@ CREATE TABLE IF NOT EXISTS `Teste`.`areas_has_candidatos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+delete from areas_has_candidatos;
+drop table areas_has_candidatos;
 
-
-select * from vagas_has_candidatos;
-
-
-update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Salvador',estado='BA' where id = 2
-update candidato set username='Octavio',password='tata',nome='Octavio',idade=19,cidade='Tubarao',estado='SC' where id = 3 
-
-insert into empresas values (default,'ricardo.223','rica223','Computacao','Trier Sistemas','Rua Julio Cesar Marcolino','Centro','73','754848','501','Tubarao','SC','345161','ricardosilva@gmail.com','984136487',default);
-
-insert into candidatos values (default,'ricardo.s4','rica24','Ricardo',17,'Rua Julio Cesar Marcolino','Centro','73','501','Tubarao','SC','ricardosilva@gmail.com','984136487','236851','437257669-02',default);
+-------- Consulta --------
 
 SELECT candidatos.nome, cursos.nome FROM candidatos
 JOIN cursos 
@@ -329,26 +345,9 @@ WHERE candidatos.id = trabalhos.candidatos_id;
 
 select vagas.nome from vagas;
 select * from candidato where id ='1';
+
 insert into administrador values (default,'administrador','$123','$Vinicius');
-
-delete from conhecimentos;
-delete from cursos;
-delete from trabalhos;
-
-drop table conhecimentos;
-drop table cursos;
-drop table trabalhos;
-
-insert into conhecimentos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'IFSC', 'Andamento','',);
-
-insert into cursos values (default, 'Octavio', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', '3', '2', 'Andamento', '',);
-
-insert into trabalhos values (default, '', 'Tecnico em Desenvolvimento de Sistemas', '2017-08-09', '2018-12-06', 'Computacao', 'Programador', 'Implementacao de Java', 'Andamento', '',);
-
-insert into candidatos values (default,'octavio.n09','tata','Octavio',19,'Rua Julio Francisco Regis','Vila Moema','43','401','Tubarao','SC','octavionaspolinineto@gmail.com','996178590','454663','065717565-01',default)
-
 insert into administrador values (default,'admin','admin1','123');
-
 
 SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON vagas_has_candidatos.candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I';
 
