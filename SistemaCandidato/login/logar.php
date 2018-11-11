@@ -39,7 +39,7 @@ if($result != Null){
     $result = getLogin($conexao, "select username,password from candidatos where username = '$username' and password = '$password'AND Comp = 0");
  if ($result != Null) {
             
-        echo("<script type='text/javascript'> alert('Voce ainda nao foi aprovado pelo administrador !!!'
+        echo("<script type='text/javascript'> alert('Voce ainda nao foi aprovado pelo administrador'
      ); location.href='form_login.php';</script>");
 
     }
@@ -47,7 +47,7 @@ if($result != Null){
     if ($result != Null) {
          
     
-        echo("<script type='text/javascript'> alert('Voce ainda nao aprovado pelo administrador !!!'
+        echo("<script type='text/javascript'> alert('Voce ainda nao aprovado pelo administrador'
             ); location.href='form_login.php';</script>");
 
     }
@@ -64,7 +64,7 @@ if($result != Null){
     if ($result == Null) {
      
     
-    echo("<script type='text/javascript'> alert('Usuario e/ou senha incorretos !!!'
+    echo("<script type='text/javascript'> alert('Usuario e/ou senha incorretos'
             ); location.href='form_login.php';</script>");
 
     }
