@@ -147,44 +147,44 @@ endif;
                         <div id="div_id_username" class="form-group required">
                             <label for="id_username" class="control-label col-md-4  requiredField"> Username<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md  textinput textInput form-control" id="id_username" maxlength="30" name="username" placeholder="Escolha seu username" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md  textinput textInput form-control" required id="id_username" maxlength="30" name="username" placeholder="Escolha seu username" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
                         <div id="div_id_password" class="form-group required">
                             <label for="id_email" class="control-label col-md-4  requiredField"> Password<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md emailinput form-control" id="id_Password" name="password" placeholder="Seu password" style="margin-bottom: 10px" type="password" />
+                                <input class="input-md emailinput form-control" id="id_Password" required name="password" placeholder="Seu password" style="margin-bottom: 10px" type="password" />
                             </div>     
                         </div>
                         <div id="div_id_nome" class="form-group required">
                             <label for="id_password1" class="control-label col-md-4  requiredField">Nome<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 "> 
-                                <input class="input-md textinput textInput form-control" id="id_nome" name="nome" placeholder="Seu nome" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_nome" required name="nome" placeholder="Seu nome" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
                         <div id="div_id_idade" class="form-group required">
                              <label for="id_idade" class="control-label col-md-4  requiredField"> Idade<span class="asteriskField">*</span> </label>
                              <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_password2" name="idade" placeholder="Digite sua idade" style="margin-bottom: 10px" type="number" />
+                                <input class="input-md textinput textInput form-control" id="id_password2" required name="idade" placeholder="Digite sua idade" style="margin-bottom: 10px" type="number" />
                             </div>
                         </div>
                         <div id="div_id_rua" class="form-group required"> 
                             <label for="id_rua" class="control-label col-md-4  requiredField"> Rua<span class="asteriskField">*</span> </label> 
                             <div class="controls col-md-8 "> 
-                                <input class="input-md textinput textInput form-control" id="id_name" name="rua" placeholder="Digite sua rua" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_name" required name="rua" placeholder="Digite sua rua" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div>
 
                         <div id="div_id_bairro" class="form-group required"> 
                             <label for="id_bairro" class="control-label col-md-4  requiredField"> Bairro<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 "> 
-                                 <input class="input-md textinput textInput form-control" id="id_bairro" name="bairro" placeholder="Bairro" style="margin-bottom: 10px" type="text" />
+                                 <input class="input-md textinput textInput form-control" id="id_bairro" required name="bairro" placeholder="Bairro" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div> 
                         <div id="div_id_numero" class="form-group required">
                             <label for="id_numero" class="control-label col-md-4  requiredField"> Número<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 "> 
-                                 <input class="input-md textinput textInput form-control" id="id_catagory" name="numero" placeholder="Número" style="margin-bottom: 10px" type="text" />
+                                 <input class="input-md textinput textInput form-control" id="id_catagory" required name="numero" placeholder="Número" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div> 
                         <div id="div_id_number" class="form-group required">
@@ -196,39 +196,39 @@ endif;
                         <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Cidade<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="cidade" placeholder="Cidade" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_location" required name="cidade" placeholder="Cidade" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Estado<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" maxlength="2" id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" maxlength="2" required id="id_location" name="estado" placeholder="Estado" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="email" placeholder="E-mail" style="margin-bottom: 10px" type="email" />
+                                <input class="input-md textinput textInput form-control" id="id_location" required name="email" placeholder="E-mail" style="margin-bottom: 10px" type="email" />
                             </div> 
                         </div>
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> Telefone<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="telefone" placeholder="Telefone" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_location" required name="telefone" placeholder="Telefone" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                         
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> RG<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="rg" placeholder="RG" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_location" required name="rg" placeholder="RG" style="margin-bottom: 10px" type="text" />
                             </div> 
                         </div>
                         
                          <div id="div_id_location" class="form-group required">
                             <label for="id_location" class="control-label col-md-4  requiredField"> CPF<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 ">
-                                <input class="input-md textinput textInput form-control" id="id_location" name="cpf" placeholder="cpf" style="margin-bottom: 10px" type="text" />
+                                <input class="input-md textinput textInput form-control" id="id_location" required name="cpf" placeholder="cpf" style="margin-bottom: 10px" type="text" />
                             </div> 
                             
                         <div id="div_id_location" class="form-group required">    

@@ -16,11 +16,10 @@ if(Count($_POST) > 0){
   $data = $_POST['data'];
   $datafinal = $_POST['datafinal'];
   $horario = $_POST['horario'];
-  $status = $_POST['status'];
   $obs = $_POST['obs'];
 
 
-$query = "insert into entrevistas values (default,'$data','$datafinal','$horario','$status','$obs',$id)";
+$query = "insert into entrevistas values (default,'$data','$datafinal','$horario',default,'$obs',$id)";
 
 mysqli_query($conexao, $query);
 
@@ -79,65 +78,57 @@ header('Location: ListarEntrevistas.php');
 
 
 <html>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-   
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <br><br>
-        <div class="conteiner">
-        
-        <div class="row col-sm-6 offset-3" >
-        
-            <form action="#" method="post">
-  <div class="form-row">
-    
-      <div class="form-group  col-md-6" >
-    <label for="inputData">Data</label>
-    <input type="date" required class="form-control" id="inputUsername" placeholder="Data" name="data">
-  </div>
-     <div class="form-group  col-md-6" >
-    <label for="inputData">Data Final</label>
-    <input type="date" required class="form-control" id="inputUsername" placeholder="Data Final" name="datafinal">
-  </div> 
-      
-         <div class="form-group  col-md-6" >
-    <label for="inputHorario">Horario</label>
-    <input type="time" required class="form-control" id="inputHorario" placeholder="horario" name="horario">
-  </div>
-       <div class="form-group  col-md-6" >
-    <label for="inputStatus">Status</label>
-    <input type="text" maxlength="1" required class="form-control" id="inputStatus" placeholder="Status da entrevista" name="status">
-  </div>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <div class="form-group col-md-6">
-      <label for="inputobservacao">Observação</label>
-      <input type="text" required class="form-control" id="inputobservacao" placeholder="Observação" name="obs">
-    </div>
-  </div>
+<div class="container">    
+            
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Sign Up</div>
+                <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
+            </div>  
+            <div class="panel-body" >
+                <form method="post" action="#">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                            
 
-     
-
-
- 
-        </div>                        
-               
-  <div class="form-group">
-      <div class="aab controls col-md-4 "></div>
-      <div class="controls col-md-8 "></div>
-    <input type="submit" class="btn btn-primary btn btn-info" value="Cadastrar Entrevista!">
-
-    </div>
-  </div>
-
-
-              
-
-
-           
-     
-      
-    </body>
-</html>
+                  
+                    
+                        <div id="div_id_username" class="form-group required">
+                            <label for="id_username" class="control-label col-md-4  requiredField"> Data inicial<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" required id="id_username" maxlength="30" name="data" placeholder="Escolha a data inicial" style="margin-bottom: 10px" type="date" />
+                            </div>
+                        </div>
+                        <div id="div_id_password" class="form-group required">
+                            <label for="id_password" class="control-label col-md-4  requiredField"> Data final<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_Password" required name="datafinal" placeholder="Escolha a data final" style="margin-bottom: 10px" type="date" />
+                            </div>     
+                        </div>
+                    <div id="div_id_password" class="form-group required">
+                            <label for="id_nomefantasia" class="control-label col-md-4  requiredField">Horario<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_nomeFantasia" required name="horario" placeholder="Escolha o horario" style="margin-bottom: 10px" type="time" />
+                            </div>     
+                    
+                        <div id="div_id_nome" class="form-group required">
+                            <label for="id_password1" class="control-label col-md-4  requiredField">Observação<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 "> 
+                                <input class="input-md textinput textInput form-control" id="id_nome" required name="obs" placeholder="Digite a observação" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                       
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                            </div> 
+                        </div>
+                      
+                </form>
