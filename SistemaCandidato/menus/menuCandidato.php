@@ -30,6 +30,9 @@
                
              </h2>  </center>  </a>
               <br><br><br><br>
+              <center><h2 class="post-title">
+                Projeto: SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
+              </h2></center>
               <center><h3 class="post-subtitle">
                 Equipe: Octavio Naspolini Neto, Vinicius Nazario Gonçalves
               </h3></center>
