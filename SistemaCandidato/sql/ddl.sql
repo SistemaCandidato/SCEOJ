@@ -8,7 +8,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-drop table vagas_has_candidatos;
+select * from cursos;
 CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `Teste`.`administrador` (
   UNIQUE INDEX `username` (`username` ASC))
 ENGINE = InnoDB;
 
-select * from empresas;
+
 CREATE TABLE IF NOT EXISTS `Teste`.`empresas` (
   `id` INT NOT NULL AUTO_INCREMENT,
    username varchar(50) not null,
@@ -213,15 +213,13 @@ CREATE TABLE IF NOT EXISTS `Teste`.`vagas_has_candidatos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
--- -----------------------------------------------------
--- Table `mydb`.`entrevistas`
--- -----------------------------------------------------
-select * from entrevistas;
+drop table entrevistas;
 CREATE TABLE IF NOT EXISTS `Teste`.`entrevistas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
+   `datafinal` DATE NOT NULL, 
   `hora` TIME NOT NULL,
-  `status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL NOT NULL DEFAULT 'Indefinido',
   `obs` VARCHAR(255) NULL,
   `vagas_has_candidatos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
