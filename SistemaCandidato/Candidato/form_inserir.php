@@ -41,24 +41,24 @@ $cpf = $_POST['cpf'];
  $linhaRg = mysqli_num_rows($testeRG);
 
  
- if ($linha >= 1 ){
-       echo("<script type='text/javascript'> alert('Username já cadastrado !'
+ if ($linha >= 1){
+       echo("<script type='text/javascript'> alert('Username já cadastrado!'
             );</script>");
 
 }
 
  if ($linhaEmail >=1){
-     echo("<script type='text/javascript'> alert('E-mail já cadastrado !'
+     echo("<script type='text/javascript'> alert('E-mail já cadastrado!'
             );</script>");
      
  }
  if ($linhaCpf >=1) {
-       echo("<script type='text/javascript'> alert('CPF já cadastrado !'
+       echo("<script type='text/javascript'> alert('CPF já cadastrado!'
             );</script>");
  
  }            
  if ($linhaRg >=1){
-     echo("<script type='text/javascript'> alert('RG já cadastrado !'
+     echo("<script type='text/javascript'> alert('RG já cadastrado!'
             );</script>");
  }else{
 
@@ -104,12 +104,12 @@ $mail->Subject = 'Sistema de candidato';
 $mail->Body = $message;
  
 if($mail->Send()):
-    echo 'Enviado com sucesso !';
+    echo 'Enviado com sucesso!';
 else:
     echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
 endif;
 
- echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso !'
+ echo("<script type='text/javascript'> alert('Cadastro realizado com sucesso!'
             );</script>");
 }
 }

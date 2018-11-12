@@ -58,7 +58,7 @@ $mail->Subject = 'Sistema de candidato';
 $mail->Body = $message;
  
 if($mail->Send()):
-    echo 'Enviado com sucesso !';
+    echo 'Enviado com sucesso!';
 else:
     echo 'Erro ao enviar Email:' . $mail->ErrorInfo;
 endif;
