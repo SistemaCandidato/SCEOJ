@@ -63,6 +63,7 @@ and open the template in the editor.
               <a class="nav-link" href="http://localhost/SistemaCandidato/Trabalhos/form_inserir.php">Trabalhos</a>
             </li>
             
+            
              <form class="navbar-form navbar-left" method="get" action="http://localhost/SistemaCandidato/Mapeamento/listar_mapeamento.php">
         <div class="input-group">
           <input type="text" class="form-control" name="q" placeholder="Pesquisar mapeamento">          
