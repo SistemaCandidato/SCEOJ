@@ -24,7 +24,7 @@ $res2 = null;
 
 if(isset($_GET['status']) && !empty($_GET['status'])){
     
-    if($_GET['status'] == 1 && $nInsc < 3 && $isInc == 0 ){
+    if($_GET['status'] == 1 && $nInsc < 20 && $isInc == 0 ){
         $sql = "INSERT INTO vagas_has_candidatos (vagas_id,candidatos_id,status) VALUE($id,$candidato,'I')";
         mysqli_query($conexao, $sql);
 
