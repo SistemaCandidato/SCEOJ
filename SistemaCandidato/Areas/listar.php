@@ -10,7 +10,7 @@ $sql = "select * from areas";
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
-<script type="text/javascript" src="../Java/alertaExclusao.js"></script>;
+<script type="text/javascript" src="../Java/alertaExclusao.js"></script>
 <div class="container">
   <p>Áreas cadastradas</p>                                                                                      
   <div class="table-responsive">          
