@@ -12,7 +12,18 @@ $id = $_GET['id'];
 $candidato = $_SESSION['id'];
 $link_voltar = "http://localhost/SistemaCandidato/Mapeamento/listar_mapeamento.php?q=$q";
 
-$sqlCand = "SELECT COUNT(*) AS INSC FROM vagas_has_candidatos WHERE candidatos_id = $candidato AND status != 'D'";
+
+$sqlCand  = " SELECT COUNT(*) AS INSC ";
+$sqlCand .= " FROM vagas_has_candidatos vhc ";
+$sqlCand .= " WHERE vhc.candidatos_id = $candidato ";
+$sqlCand .= "     AND vhc.status != 'D' ";
+$sqlCand .= "         and EXISTS ( ";
+$sqlCand .= "                 SELECT *  ";
+$sqlCand .= "                 FROM vagas vg  ";
+$sqlCand .= "                 WHERE vg.id = vhc.vagas_id  ";
+$sqlCand .= "                 and datafinal >= CURDATE() ";
+$sqlCand .= "                 ) ";
+
 $res = mysqli_fetch_array(mysqli_query($conexao, $sqlCand)); 
 $nInsc = $res['INSC'];
 $res = null;
@@ -24,7 +35,7 @@ $res2 = null;
 
 if(isset($_GET['status']) && !empty($_GET['status'])){
     
-    if($_GET['status'] == 1 && $nInsc < 20 && $isInc == 0 ){
+    if($_GET['status'] == 1 && $nInsc < 3 && $isInc == 0 ){
         $sql = "INSERT INTO vagas_has_candidatos (vagas_id,candidatos_id,status) VALUE($id,$candidato,'I')";
         mysqli_query($conexao, $sql);
 

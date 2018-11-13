@@ -37,8 +37,8 @@ FROM vagas_has_candidatos
         <th>Idade</th>
         <th>E-mail do candidato</th>
         <th>Nome da vaga</th>
-        <th>Nome da empresa</th>
         <th>Confirmar entrevista</th>
+        <th>Excluir</th
  
       </tr>
     </thead>
@@ -52,12 +52,12 @@ FROM vagas_has_candidatos
             <td><?= $linha['idade'] ?></td>
             <td><?= $linha['email'] ?></td>
             <td><?= $linha['VG_nome'] ?></td>
-            <td><?= $linha['razao'] ?></td>
+   
             
             
 
       <td><a href="form_inserir.php?id=<?= $linha['id'] ?>&email= <?=$linha['email']?> &razao= <?= $linha['razao']?> &nome= <?= $linha['nome']?>">
-              <img src="../imagens/confirmar.png" height="30" width="30"/></a></td>
+              <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
               
        <td><a href="excluir.php?id=<?= $linha['id'] ?>">
                <img src="../imagens/excluir.png" height="30" width="30"/></a></td>       

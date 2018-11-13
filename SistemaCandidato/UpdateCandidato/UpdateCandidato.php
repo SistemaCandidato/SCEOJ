@@ -1,7 +1,8 @@
         <?php
+        include_once '../login/autenticacao.php';
         include '../cabecalho.php';
         include_once '../sql/conectar.php';
-        include_once '../login/autenticacao.php';
+  
          $sql = "SELECT vagas_has_candidatos.id,vagas.id AS VG, vagas.nome,vagas.descricao,vagas.periodo,empresas.nomefantasia 
 from vagas_has_candidatos INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN
 empresas ON vagas.id_empresa = empresas.id INNER JOIN candidatos ON vagas_has_candidatos.candidatos_id = candidatos.id and candidatos.id = {$_SESSION['id']}
@@ -33,7 +34,7 @@ vagas_has_candidatos.status = 'E'";
       <th>Descrição da vaga</th>
       <th>Nome da empresa</th>
       <th>Excluir</th>
-      <th>Alterar</th>
+      <th>Ver vaga completa</th>
       
     </tr>
   </thead>
@@ -54,7 +55,7 @@ vagas_has_candidatos.status = 'E'";
               <img src="../imagens/excluir.png" height="30" width="30"/></a></td>
               
                <td><a href="VerVaga.php?id=<?= $linha['id'] ?>&VG=<?=$linha['VG']?>">
-                    <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>
+                       <img src="../imagens/magnifying-glass-145942.png" height="30" width="30"/></a></td>
                     
         </tr>
         <?php
