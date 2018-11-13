@@ -1,7 +1,7 @@
 <?php
 include '../sql/conectar.php';
 $idvaga = $_GET['idVagas'];
-$status = 'I';
+$status = 'E';
 $id = $_GET['id'];
 
 $query = "insert into vagas_has_candidatos VALUES(default,'$idvaga','$id','$status')";

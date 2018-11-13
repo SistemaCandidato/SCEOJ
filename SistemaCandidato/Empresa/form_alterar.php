@@ -127,12 +127,14 @@
                             <div class="controls col-md-8 ">
                                 <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
             
-                            </div>
-                        </div>
-                    </div>
+                         
                 </form>
             </div>
         </div>
     </div>
 </div>
+        </div>
+    </div>
+</div>
+
                           
