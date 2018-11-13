@@ -20,17 +20,14 @@ $resultado = mysqli_query($conexao, $sql);
   <div class="table-responsive">          
   <table class="table">
     <thead>
-        <td>Razão Social</td><td>Endereço</td><td>Bairro</td><td>Número</td><td>Cidade</td><td>CNPJ</td><td>Telefone</td><td>Excluir</td><td>Confirmar</td>
+        <td>Razão Social</td><td>Cidade</td><td>CNPJ</td><td>Telefone</td><td>Excluir</td><td>Ver cadastro completo</td>
     </tr>
     <?php
     while ($linha = mysqli_fetch_array($resultado)) {
         ?>
         <tr>
           
-            <td><?= $linha['razao']?></td>
-            <td><?= $linha['endereco']?></td>
-            <td><?= $linha['bairro']?></td>
-            <td><?= $linha['numero']?></td>
+            <td><?= $linha['razao']?></td>>
             <td><?= $linha['cidade']?></td>
             <td><?= $linha['cnpj']?></td>
             <td><?= $linha['telefone']?></td>
@@ -38,8 +35,8 @@ $resultado = mysqli_query($conexao, $sql);
             <td><a href="excluir.php?id=<?= $linha['id']?>">
                     <img src="../../imagens/excluir.png"  width="50"/></a></td>
               
-                    <td><a href="confirmar.php?id=<?= $linha['id']?>">
-                            <img src="../../imagens/confirmar.png"  width="50"/></a></td>
+                    <td><a href="verCadastro.php?id=<?= $linha['id']?>">
+                            <img src="../../imagens/magnifying-glass-145942.png"  width="50"/></a></td>
                 
               
         </tr>

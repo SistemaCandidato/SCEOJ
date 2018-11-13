@@ -1,8 +1,9 @@
 <?php
-
-$id = $_GET['id'];
-
 include '../../sql/conectar.php';
+$id = $_POST['id'];
+
+
+
 
 $sql_pessoa = "update candidatos set Comp=1 where id=$id";
 
