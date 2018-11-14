@@ -21,7 +21,8 @@ if(Count($_POST) > 0){
 
 $query = "insert into entrevistas values (default,'$data','$datafinal','$horario',default,'$obs',$id)";
 
-mysqli_query($conexao, $query);
+if (mysqli_query($conexao, $query)){
+
 
 $entrevista_id = mysqli_insert_id($conexao);
 
@@ -67,7 +68,7 @@ endif;
 
     
 header('Location: ListarEntrevistas.php');
-
+}
 }
      
      
@@ -126,7 +127,7 @@ header('Location: ListarEntrevistas.php');
                         <div class="form-group"> 
                             <div class="aab controls col-md-4 "></div>
                             <div class="controls col-md-8 ">
-                                <input type="submit" name="Signup" value="Signup" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                <input type="submit" name="Cadastrar Entrevista" value="Cadastrar Entrevista" class="btn btn-primary btn btn-info" id="submit-id-signup" />
                             </div> 
                         </div>
                       

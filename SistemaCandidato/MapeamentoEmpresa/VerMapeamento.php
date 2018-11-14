@@ -45,7 +45,7 @@
             
    
     
-            <td><a href="../Entrevistas/form_inserir.php?id=<?= $linha['id']?>?>&email= <?=$linha['email']?> &razao= <?= $linha['razao']?> &nome= <?= $linha['nome']?>">
+            <td><a href="../Entrevistas/form_inserir.php?id=<?= $linha['id']?>&email= <?=$linha['email']?> &razao= <?= $linha['razao']?> &nome= <?= $linha['nome']?>">
                     <img src="../imagens/alterar.jpg" height="30" width="30"/></a></td>   
            
                    
