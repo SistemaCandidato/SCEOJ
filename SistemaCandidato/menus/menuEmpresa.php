@@ -24,9 +24,12 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-preview">
-              <center><h2 class="post-title">
-                Projeto: SCEOJ - Sistema de Comunicação entre a Empresa e o Jovem
-              </h2></center>
+             <div class="post-preview">
+              <a href="http://localhost/SistemaCandidato/MapeamentoEmpresa/VerMapeamento.php"> <center><h2 class="post-title">
+               Alguns candidatos se mostraram interessados em uma das suas vagas, clique aqui para ver quais são
+                     
+               
+             </h2>  </center>  </a>
               <center><h3 class="post-subtitle">
                 Equipe: Octavio Naspolini Neto, Vinicius Nazario Gonçalves
               </h3></center>

@@ -31,7 +31,7 @@ $resultado = mysqli_query($conexao, $sql);
     while ($linha = mysqli_fetch_array($resultado)) {
    ?>
         <tr>
-            <?=$linha ['ID']?>;
+       
             <td><?= $linha['nome']?></td> 
             <td><?= $linha['descricao'] ?></td>
             <td><?= $linha['salario'] ?></td>

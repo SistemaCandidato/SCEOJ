@@ -51,9 +51,6 @@ and open the template in the editor.
               <a class="nav-link" href="http://localhost/SistemaCandidato/Candidato/listar.php">Ver sua conta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost/SistemaCandidato/login/logout.php">Sair</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/Conhecimentos/form_inserir.php">Conhecimentos</a>
             </li>
             <li class="nav-item">
@@ -61,6 +58,9 @@ and open the template in the editor.
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://localhost/SistemaCandidato/Trabalhos/form_inserir.php">Trabalhos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost/SistemaCandidato/login/logout.php">Sair</a>
             </li>
             
             
