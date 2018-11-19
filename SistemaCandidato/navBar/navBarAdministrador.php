@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <link rel="icon" href="img/icone.png">  
         <meta charset="UTF-8">
         <title>Bem vindo</title>
     </head>
