@@ -1,9 +1,10 @@
 <?php
- include '../sql/conectar.php';
- include '../cabecalho.php';
+ include '../../sql/conectar.php';
+ include '../../cabecalho.php';
         $id = $_GET['id'];
        
         $sql_pessoa = "select * from empresas where id = $id";
+      
         
         $resultado = mysqli_query($conexao, $sql_pessoa);
         
@@ -28,7 +29,7 @@
             <div class="panel-body" >
                 <form method="post" action="confirmar.php">
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
-                    <input type="hidden" name="id" value="<?= $id ?>">
+                       <input type="hidden" name="id" value="<?= $id ?>">
                             
 
                   
@@ -74,7 +75,7 @@
                         <div id="div_id_numero" class="form-group required">
                             <label for="id_numero" class="control-label col-md-4  requiredField"> CEP<span class="asteriskField">*</span> </label>
                             <div class="controls col-md-8 "> 
-                                 <input class="input-md textinput textInput form-control" id="id_catagory" name="cep" readonly="readonly" placeholder="CEP" value="<?= $linha['cep']?>" style="margin-bottom: 10px" type="text" />
+                                 <input class="input-md textinput textInput form-control" id="id_catagory" name="cep" readonly="readonly" placeholder="CEP" value="<?=$linha['cep']?>" style="margin-bottom: 10px" type="text" />
                             </div>
                         </div> 
                         <div id="div_id_number" class="form-group required">
