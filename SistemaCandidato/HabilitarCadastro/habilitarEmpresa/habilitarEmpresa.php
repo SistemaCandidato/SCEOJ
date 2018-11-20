@@ -27,16 +27,16 @@ $resultado = mysqli_query($conexao, $sql);
         ?>
         <tr>
           
-            <td><?= $linha['razao']?></td>>
+            <td><?= $linha['razao']?></td>
             <td><?= $linha['cidade']?></td>
             <td><?= $linha['cnpj']?></td>
             <td><?= $linha['telefone']?></td>
             
             <td><a href="excluir.php?id=<?= $linha['id']?>">
-                    <img src="../../imagens/excluir.png"  width="50"/></a></td>
+                    <img src="../../imagens/excluir.png"  height="30" width="30"/></a></td>
               
                     <td><a href="verCadastro.php?id=<?= $linha['id']?>">
-                            <img src="../../imagens/magnifying-glass-145942.png"  width="50"/></a></td>
+                            <img src="../../imagens/magnifying-glass-145942.png"  height="30" width="30"/></a></td>
                 
               
         </tr>
