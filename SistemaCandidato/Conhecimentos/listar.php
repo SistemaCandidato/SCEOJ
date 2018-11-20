@@ -25,6 +25,8 @@ $resultado = mysqli_query($conexao, $sql);
         <th>Data Final</th>
         <th>Local</th>
         <th>Status</th>
+        <th>Excluir</th>
+        <th>Alterar cadastro</th>    
       </tr>
     </thead>
     <?php
