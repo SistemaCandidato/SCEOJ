@@ -232,8 +232,9 @@ select * from entrevistas;
 CREATE TABLE IF NOT EXISTS `Teste`.`entrevistas` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
+ `datafinal` DATE NOT NULL,
   `hora` TIME NOT NULL,
-  `status` varchar(45) NOT NULL,
+  `status` varchar(45) DEFAULT 'Interminado',
   `obs` VARCHAR(255) NULL,
   `vagas_has_candidatos_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -343,6 +344,9 @@ select * from candidato where id ='1';
 
 insert into administrador values (default,'administrador','$123','$Vinicius');
 insert into administrador values (default,'admin','admin1','123');
+
+select * from empresas where id = 2;
+
 
 SELECT vagas_has_candidatos.id, candidatos.id, candidatos.nome, candidatos.idade, candidatos.email, vagas.nome AS VG_nome, empresas.razao FROM vagas_has_candidatos INNER JOIN candidatos ON vagas_has_candidatos.candidatos_id = candidatos.id INNER JOIN vagas ON vagas_has_candidatos.vagas_id = vagas.id INNER JOIN empresas WHERE vagas.id_empresa = empresas.id AND empresas.id = 1 AND vagas_has_candidatos.status = 'I';
 
