@@ -26,6 +26,8 @@ $resultado = mysqli_query($conexao, $sql);
         <th>Quantidade de Semestres</th>
         <th>Quantidade de Semestres Finalizados</th>
         <th>Status</th>
+        <th>Excluir</th>
+        <th>Alterar cadastro</th>    
       </tr>
     </thead>
     <?php
