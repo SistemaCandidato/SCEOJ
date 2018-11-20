@@ -30,10 +30,9 @@
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"></div>
             </div>  
             <div class="panel-body" >
-                <form method="post" action="#" enctype="multipart/form-data">
+                <form method="post" action="alterar.php" enctype="multipart/form-data">
                     <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
-        
-            <form action="alterar.php" method="post">
+
                 <input type="hidden" name="id" value="<?= $id ?>">        
                 
         <div class="form-row">
