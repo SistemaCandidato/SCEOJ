@@ -230,14 +230,7 @@ endif;
                             <div class="controls col-md-8 ">
                                 <input class="input-md textinput textInput form-control" id="id_location" required name="cpf" placeholder="cpf" style="margin-bottom: 10px" type="text" />
                             </div> 
-                            
-                        <div id="div_id_location" class="form-group required">    
-                            <tr>
-                            <td>Imagem:</td>
-                            <td><input type="file" name="foto" size="50"></td>
-                            </tr>
-                        </div>
-                        </div>
+                  
                      
                         <div class="form-group"> 
                             <div class="aab controls col-md-4 "></div>
