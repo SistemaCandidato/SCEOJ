@@ -24,8 +24,6 @@
     <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <div class="panel-title">Sign Up</div>
-                <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="../login/form_login.php">Sign In</a></div>
             </div>  
             <div class="panel-body">
                 <form method="post" action='alterar.php' enctype="multipart/form-data">
@@ -126,7 +124,7 @@
                         <div class="form-group"> 
                             <div class="aab controls col-md-4 "></div>
                             <div class="controls col-md-8 ">
-                                <input type="submit" name="Signup" value="Cadastrar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                <input type="submit" name="Signup" value="Alterar" class="btn btn-primary btn btn-info" id="submit-id-signup" />
                  
                             </div>
                         </div> 
