@@ -25,6 +25,7 @@ and open the template in the editor.
         <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-info">
             <div class="panel-heading">
+             <div class="panel-title">Cadastre-se</div>
                 <div style="float:right; font-size: 85%; position: relative; top:-10px"></div>
             </div>  
             <div class="panel-body" >
