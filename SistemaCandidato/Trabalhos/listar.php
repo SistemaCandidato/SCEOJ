@@ -27,6 +27,8 @@ $resultado = mysqli_query($conexao, $sql);
         <th>Função</th>
         <th>Tarefas</th>
         <th>Status</th>
+        <th>Excluir</th>
+        <th>Alterar cadastro</th>    
       </tr>
     </thead>
     <?php
