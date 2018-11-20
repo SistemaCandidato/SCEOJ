@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['id'];
+$id = $_POST['id'];
 
 include '../../sql/conectar.php';
 
