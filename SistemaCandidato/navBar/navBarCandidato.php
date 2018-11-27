@@ -78,7 +78,7 @@ and open the template in the editor.
     </nav>
       
   </body>
-    <header class="masthead" style="background-image: url('./img/capa.png')">
+    <header class="masthead" style="background-image: url('./img/sistem-multiplataforma-softic-solutions.png')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
